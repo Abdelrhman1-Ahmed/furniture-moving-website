@@ -702,6 +702,7 @@ button {
 .highlight {
   background: linear-gradient(135deg, #ffd977 0%, var(--gold) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -2153,4 +2154,6 @@ button {
 .elite-stars-input label:hover, .elite-stars-input label:hover ~ label, .elite-stars-input input:checked ~ label { color: #e1a928; }
 .elite-review-submit { width: 100%; margin-top: 20px; }
 .elite-review-status { margin: 14px 0 0; font-weight: 700; }
+.reviews-slider:has(.reviews-track:empty),
+.reviews-slider:has(.reviews-track:empty) + .slider-controls { display: none; }
 @media (max-width: 600px) { .elite-review-qr-wrap { flex-direction: column; } .elite-review-dialog { padding: 22px 18px; } }
