@@ -14,15 +14,15 @@ const CONFIG = {
   phone: '+966567798346',
   phoneDisplay: '0567798346',
   whatsapp: '966567798346',
-  email: 'nokhba0567798346@gmail.com',
+  email: 'alnkhbhlnqlalathathbalryadshrk@gmail.com',
   companyName: 'شركة النخبة لنقل وتخزين الأثاث',
   
   // 🌐 روابط حسابات التواصل الاجتماعي الرسمية باسم النخبة
   social: {
     facebook: 'https://facebook.com',      // رابط حساب الفيسبوك
     twitter: 'https://x.com',              // رابط حساب تويتر / إكس
-    tiktok: 'https://www.tiktok.com/@user411445480426?_r=1&_t=ZS-98zXzM9nm11',
-    instagram: 'https://www.instagram.com/alnkhbhshrkh24?igsh=dzAyMDZxZ3pyNnRu&utm_source=qr'
+    tiktok: 'https://tiktok.com/@user505792731677',
+    instagram: 'https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw=='
   },
 
   // رسالة الواتساب الترحيبية الافتراضية
@@ -314,6 +314,7 @@ function initReviewsSlider() {
 
   const cards = $$('.review-card', track);
   const totalCards = cards.length;
+  if (!totalCards) return;
   let currentIndex = 0;
   let autoplayTimer = null;
 
@@ -649,7 +650,8 @@ function initEliteReviewForm() {
 
   if (!modal || !form) return;
 
-  const googleReviewUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('شركة النخبة لنقل الأثاث بالرياض');
+  // ضع رابط Google Maps الحقيقي هنا عند توفره لتفعيل تحويل تقييمات 4 و5 نجوم.
+  const googleReviewUrl = '';
   const managementWhatsapp = '966567798346';
   const reviewPageUrl = `${window.location.origin}${window.location.pathname}#reviews`;
 
@@ -683,8 +685,12 @@ function initEliteReviewForm() {
     }
 
     if (rating >= 4) {
-      window.open(googleReviewUrl, '_blank', 'noopener,noreferrer');
-      closeModal();
+      if (googleReviewUrl) {
+        window.open(googleReviewUrl, '_blank', 'noopener,noreferrer');
+        closeModal();
+      } else {
+        status.textContent = 'شكراً لتقييمك. سيتم تفعيل رابط Google Maps قريباً.';
+      }
       return;
     }
 
