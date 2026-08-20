@@ -4,7 +4,7 @@
    Version: 2.0 (Official Production Edition)
 ===================================================== */
 
-'use strict';
+'use strict'
 
 /* ========================
    GLOBAL CONFIGURATION
