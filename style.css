@@ -1,4 +1,3 @@
-
 /* ========================================================
    شركة النخبة للنقل - Official Stylesheet
    Luxury & Eye-Comfort Edition (النسخة الفاخرة والمريحة للعين)
@@ -2131,3 +2130,27 @@ button {
 
   .contact-form-wrap, .contact-info { padding: 26px 20px; }
 }
+
+/* Additional customer review form */
+.elite-review-actions { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 32px; }
+.elite-review-button, .elite-review-submit { border: 0; border-radius: 8px; padding: 13px 22px; background: var(--gold-dark, #a97e25); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.elite-review-button:hover, .elite-review-submit:hover { background: var(--gold, #c89b3c); }
+.elite-review-qr-wrap { display: flex; align-items: center; gap: 12px; text-align: center; }
+.elite-review-qr { display: block; width: 110px; height: 110px; background: #fff; }
+.elite-review-qr-wrap a { color: #168c55; font-weight: 700; text-decoration: none; }
+.elite-review-modal { display: none; position: fixed; inset: 0; z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+.elite-review-modal.is-open { display: flex; }
+.elite-review-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, .65); }
+.elite-review-dialog { position: relative; z-index: 1; width: min(100%, 520px); max-height: 90vh; overflow-y: auto; padding: 28px; border-radius: 10px; background: #fff; color: #222; }
+.elite-review-dialog h2 { margin: 0 0 22px; }
+.elite-review-close { position: absolute; top: 12px; left: 12px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f1f1f1; cursor: pointer; }
+.elite-review-dialog label, .elite-rating-field legend { display: block; margin: 14px 0 7px; font-weight: 700; }
+.elite-review-dialog input, .elite-review-dialog textarea { box-sizing: border-box; width: 100%; padding: 11px; border: 1px solid #d6d6d6; border-radius: 6px; font: inherit; }
+.elite-rating-field { padding: 0; border: 0; }
+.elite-stars-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 5px; }
+.elite-stars-input input { position: absolute; opacity: 0; pointer-events: none; }
+.elite-stars-input label { margin: 0; color: #cfcfcf; font-size: 32px; line-height: 1; cursor: pointer; }
+.elite-stars-input label:hover, .elite-stars-input label:hover ~ label, .elite-stars-input input:checked ~ label { color: #e1a928; }
+.elite-review-submit { width: 100%; margin-top: 20px; }
+.elite-review-status { margin: 14px 0 0; font-weight: 700; }
+@media (max-width: 600px) { .elite-review-qr-wrap { flex-direction: column; } .elite-review-dialog { padding: 22px 18px; } }
