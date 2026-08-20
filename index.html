@@ -523,8 +523,43 @@
         <div class="slider-dots" id="sliderDots"></div>
         <button class="slider-btn" id="nextBtn" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
       </div>
+      <div class="elite-review-actions">
+        <button type="button" id="eliteOpenReview" class="elite-review-button"><i class="fas fa-star"></i> أضف تقييمك للخدمة</button>
+        <div class="elite-review-qr-wrap">
+          <img id="eliteReviewQr" class="elite-review-qr" alt="رمز QR لصفحة التقييم" width="110" height="110" />
+          <a id="eliteReviewWhatsapp" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> إرسال رابط التقييم عبر واتساب</a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <div class="elite-review-modal" id="eliteReviewModal" aria-hidden="true">
+    <div class="elite-review-backdrop" id="eliteReviewBackdrop"></div>
+    <div class="elite-review-dialog" role="dialog" aria-modal="true" aria-labelledby="eliteReviewTitle">
+      <button type="button" class="elite-review-close" id="eliteReviewClose" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+      <h2 id="eliteReviewTitle">قيّم تجربتك مع شركة النخبة</h2>
+      <form id="eliteReviewForm">
+        <label for="eliteReviewerName">الاسم</label>
+        <input id="eliteReviewerName" name="name" type="text" required minlength="2" />
+        <label for="eliteReviewerPhone">رقم الجوال</label>
+        <input id="eliteReviewerPhone" name="phone" type="tel" required />
+        <fieldset class="elite-rating-field">
+          <legend>التقييم</legend>
+          <div class="elite-stars-input" dir="ltr">
+            <input type="radio" id="eliteStar5" name="rating" value="5" required /><label for="eliteStar5">★</label>
+            <input type="radio" id="eliteStar4" name="rating" value="4" /><label for="eliteStar4">★</label>
+            <input type="radio" id="eliteStar3" name="rating" value="3" /><label for="eliteStar3">★</label>
+            <input type="radio" id="eliteStar2" name="rating" value="2" /><label for="eliteStar2">★</label>
+            <input type="radio" id="eliteStar1" name="rating" value="1" /><label for="eliteStar1">★</label>
+          </div>
+        </fieldset>
+        <label for="eliteReviewComment">تعليقك</label>
+        <textarea id="eliteReviewComment" name="comment" rows="4" required></textarea>
+        <button type="submit" class="elite-review-submit">إرسال التقييم</button>
+        <p id="eliteReviewStatus" class="elite-review-status" role="status"></p>
+      </form>
+    </div>
+  </div>
 
   <!-- ============================================================
        GALLERY SECTION
