@@ -1,3 +1,4 @@
+
 /* ========================================================
    شركة النخبة للنقل - Official Stylesheet
    Luxury & Eye-Comfort Edition (النسخة الفاخرة والمريحة للعين)
@@ -771,9 +772,8 @@ button {
 }
 
 .hero-img-badge {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin: 18px auto 0;
+  width: fit-content;
   background: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(12px);
   color: #ffffff;
