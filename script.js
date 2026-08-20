@@ -633,3 +633,68 @@ function updateYear() {
   const el = $('#currentYear');
   if (el) el.textContent = new Date().getFullYear();
 }
+
+/* ========================
+   CUSTOMER REVIEW ROUTING
+======================== */
+function initEliteReviewForm() {
+  const modal = document.getElementById('eliteReviewModal');
+  const openButton = document.getElementById('eliteOpenReview');
+  const closeButton = document.getElementById('eliteReviewClose');
+  const backdrop = document.getElementById('eliteReviewBackdrop');
+  const form = document.getElementById('eliteReviewForm');
+  const status = document.getElementById('eliteReviewStatus');
+  const qrImage = document.getElementById('eliteReviewQr');
+  const whatsappLink = document.getElementById('eliteReviewWhatsapp');
+
+  if (!modal || !form) return;
+
+  const googleReviewUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('شركة النخبة لنقل الأثاث بالرياض');
+  const managementWhatsapp = '966567798346';
+  const reviewPageUrl = `${window.location.origin}${window.location.pathname}#reviews`;
+
+  const openModal = () => {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    form.reset();
+    status.textContent = '';
+  };
+
+  openButton?.addEventListener('click', openModal);
+  closeButton?.addEventListener('click', closeModal);
+  backdrop?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const rating = Number(data.get('rating'));
+    if (!rating) {
+      status.textContent = 'يرجى اختيار عدد النجوم.';
+      return;
+    }
+
+    if (rating >= 4) {
+      window.open(googleReviewUrl, '_blank', 'noopener,noreferrer');
+      closeModal();
+      return;
+    }
+
+    const message = `تقييم جديد لشركة النخبة\nالاسم: ${data.get('name')}\nالجوال: ${data.get('phone')}\nالتقييم: ${rating}/5\nالتعليق: ${data.get('comment')}`;
+    window.open(`https://wa.me/${managementWhatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    status.textContent = 'تم إرسال ملاحظتك للإدارة بسرية. شكراً لك.';
+  });
+
+  if (qrImage) qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(reviewPageUrl)}`;
+  if (whatsappLink) whatsappLink.href = `https://wa.me/?text=${encodeURIComponent(`يمكنك تقييم خدمة شركة النخبة من هنا:\n${reviewPageUrl}`)}`;
+}
+
+document.addEventListener('DOMContentLoaded', initEliteReviewForm);
