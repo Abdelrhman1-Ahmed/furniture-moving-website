@@ -61,15 +61,10 @@
     "priceRange": "$$",
     "openingHours": "Mo-Su 00:00-23:59",
     "serviceType": ["نقل عفش", "نقل أثاث", "فك وتركيب غرف نوم", "تغليف أثاث", "تخزين أثاث", "نقل مكاتب"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "1250"
-    },
     "sameAs": [
       "https://facebook.com",
       "https://x.com",
-      "https://tiktok.com"
+      "https://tiktok.com/@user505792731677"
     ]
   }
   </script>
@@ -92,8 +87,8 @@
         <span class="topbar-social-title">حسابات النخبة:</span>
         <a href="https://facebook.com" id="topFacebook" class="top-social-link fb" aria-label="حساب فيسبوك شركة النخبة" target="_blank" rel="noopener noreferrer" title="فيسبوك - النخبة للنقل"><i class="fab fa-facebook-f"></i></a>
         <a href="https://x.com" id="topTwitter" class="top-social-link tw" aria-label="حساب منصة إكس (تويتر) شركة النخبة" target="_blank" rel="noopener noreferrer" title="منصة إكس (تويتر) - النخبة"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.tiktok.com/@user411445480426?_r=1&_t=ZS-98zXzM9nm11" id="topTiktok" class="top-social-link tt" aria-label="حساب تيك توك شركة النخبة" target="_blank" rel="noopener noreferrer" title="تيك توك - النخبة"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.instagram.com/alnkhbhshrkh24?igsh=dzAyMDZxZ3pyNnRu&utm_source=qr" id="topInstagram" class="top-social-link ig" aria-label="حساب انستقرام شركة النخبة" target="_blank" rel="noopener noreferrer" title="انستقرام - النخبة"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@user505792731677" id="topTiktok" class="top-social-link tt" aria-label="حساب تيك توك شركة النخبة" target="_blank" rel="noopener noreferrer" title="تيك توك - النخبة"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="topInstagram" class="top-social-link ig" aria-label="حساب انستقرام شركة النخبة" target="_blank" rel="noopener noreferrer" title="انستقرام - النخبة"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/966567798346" id="topWhatsapp" class="top-social-link wa" aria-label="تواصل عبر واتساب" target="_blank" rel="noopener noreferrer" title="واتساب"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -448,73 +443,18 @@
   <section class="reviews-section section" id="reviews">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-star"></i> تقييمات العملاء</span>
-        <h2 class="section-title">ماذا يقول عملاؤنا عن النخبة؟</h2>
-        <p class="section-subtitle">نفخر بالثقة الكبيرة التي منحنا إياها مئات العملاء في جميع أنحاء الرياض</p>
+        <span class="section-badge"><i class="fas fa-star"></i> رأيك في خدمتنا يهمنا</span>
+        <div class="elite-review-actions">
+          <button type="button" id="eliteOpenReview" class="elite-review-button"><i class="fas fa-star"></i> أضف تقييمك للخدمة</button>
+          <div class="elite-review-qr-wrap">
+            <img id="eliteReviewQr" class="elite-review-qr" alt="رمز QR لصفحة التقييم" width="110" height="110" />
+            <a id="eliteReviewWhatsapp" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> إرسال رابط التقييم عبر واتساب</a>
+          </div>
+        </div>
       </div>
       <div class="reviews-slider" id="reviewsSlider">
         <div class="reviews-track" id="reviewsTrack">
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="reviewer-avatar">م</div>
-              <div class="reviewer-info">
-                <h4>محمد الشمري</h4>
-                <span>حي النرجس - الرياض</span>
-              </div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-            </div>
-            <p class="review-text">"خدمة ممتازة جداً وقمة في الرقي! الفريق وصل على الموعد ونقلوا أثاث الفيلا كامل بدون أي خدش، والتغليف كان ممتاز جداً. أنصح بالتعامل معهم."</p>
-            <div class="review-date"><i class="fas fa-calendar-day"></i> منذ أسبوع</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="reviewer-avatar" style="background: var(--gold-dark);">س</div>
-              <div class="reviewer-info">
-                <h4>سارة العتيبي</h4>
-                <span>حي الياسمين - الرياض</span>
-              </div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-            </div>
-            <p class="review-text">"تجربة رائعة ومريحة جداً! النجار فك وركب غرف النوم والمطبخ باحترافية وسرعة. السعر كان مناسب والتعامل في قمة الذوق. شكراً لشركة النخبة."</p>
-            <div class="review-date"><i class="fas fa-calendar-day"></i> منذ أسبوعين</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="reviewer-avatar" style="background: #0d9488;">ع</div>
-              <div class="reviewer-info">
-                <h4>عبدالله الدوسري</h4>
-                <span>حي الملقا - الرياض</span>
-              </div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-            </div>
-            <p class="review-text">"شركة محترمة جداً وملتزمة. نقلنا مكاتب الشركة خلال يوم واحد دون أي تأخير أو تعطيل للعمل. الشاحنات نظيفة ومجهزة والعمالة ممتازة."</p>
-            <div class="review-date"><i class="fas fa-calendar-day"></i> منذ شهر</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="reviewer-avatar" style="background: #6366f1;">ن</div>
-              <div class="reviewer-info">
-                <h4>نورة الحربي</h4>
-                <span>حي العارض - الرياض</span>
-              </div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-            </div>
-            <p class="review-text">"أفضل شركة نقل أثاث تعاملت معها بالرياض! التغليف بالفقاعات حمى كل التحف والزجاج، وخدمة العملاء متجاوبة طوال الوقت. شكراً لكم."</p>
-            <div class="review-date"><i class="fas fa-calendar-day"></i> منذ شهرين</div>
-          </div>
-
+          <!-- أضف بطاقات التقييمات الحقيقية هنا بعد اعتمادها من الإدارة. -->
         </div>
       </div>
       <!-- Slider Controls -->
@@ -522,13 +462,6 @@
         <button class="slider-btn" id="prevBtn" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
         <div class="slider-dots" id="sliderDots"></div>
         <button class="slider-btn" id="nextBtn" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
-      </div>
-      <div class="elite-review-actions">
-        <button type="button" id="eliteOpenReview" class="elite-review-button"><i class="fas fa-star"></i> أضف تقييمك للخدمة</button>
-        <div class="elite-review-qr-wrap">
-          <img id="eliteReviewQr" class="elite-review-qr" alt="رمز QR لصفحة التقييم" width="110" height="110" />
-          <a id="eliteReviewWhatsapp" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> إرسال رابط التقييم عبر واتساب</a>
-        </div>
       </div>
     </div>
   </section>
@@ -666,7 +599,7 @@
           </a>
 
           <!-- TikTok -->
-          <a href="https://www.tiktok.com/@user411445480426?_r=1&_t=ZS-98zXzM9nm11" id="cardTiktok" class="social-card-box tt" target="_blank" rel="noopener noreferrer" aria-label="حساب تيك توك شركة النخبة لنقل الأثاث">
+          <a href="https://tiktok.com/@user505792731677" id="cardTiktok" class="social-card-box tt" target="_blank" rel="noopener noreferrer" aria-label="حساب تيك توك شركة النخبة لنقل الأثاث">
             <div class="social-card-icon"><i class="fab fa-tiktok"></i></div>
             <div class="social-card-info">
               <h4>تيك توك | TikTok</h4>
@@ -676,7 +609,7 @@
           </a>
 
           <!-- Instagram -->
-          <a href="https://www.instagram.com/alnkhbhshrkh24?igsh=dzAyMDZxZ3pyNnRu&utm_source=qr" id="cardInstagram" class="social-card-box ig" target="_blank" rel="noopener noreferrer" aria-label="حساب انستقرام شركة النخبة لنقل الأثاث">
+          <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="cardInstagram" class="social-card-box ig" target="_blank" rel="noopener noreferrer" aria-label="حساب انستقرام شركة النخبة لنقل الأثاث">
             <div class="social-card-icon"><i class="fab fa-instagram"></i></div>
             <div class="social-card-info">
               <h4>انستقرام | Instagram</h4>
@@ -720,11 +653,11 @@
                 <span class="contact-item-value">+966 56 779 8346</span>
               </div>
             </a>
-            <a href="mailto:nokhba0567798346@gmail.com" id="contactEmail" class="contact-item">
+            <a href="mailto:alnkhbhlnqlalathathbalryadshrk@gmail.com" id="contactEmail" class="contact-item">
               <div class="contact-item-icon" style="background: rgba(234,67,53,0.1); color: #ea4335;"><i class="fas fa-envelope"></i></div>
               <div>
                 <span class="contact-item-label">البريد الإلكتروني الرسمي</span>
-                <span class="contact-item-value" style="direction: ltr;">nokhba0567798346@gmail.com</span>
+                <span class="contact-item-value" style="direction: ltr;">alnkhbhlnqlalathathbalryadshrk@gmail.com</span>
               </div>
             </a>
             <div class="contact-item">
@@ -824,9 +757,9 @@
           <div class="footer-social-links">
             <a href="https://facebook.com" id="socialFacebook" class="footer-social-link fb" aria-label="حساب فيسبوك شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
             <a href="https://x.com" id="socialTwitter" class="footer-social-link tw" aria-label="حساب تويتر إكس شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="تويتر / إكس"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://tiktok.com" id="socialTiktok" class="footer-social-link tt" aria-label="حساب تيك توك شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+            <a href="https://tiktok.com/@user505792731677" id="socialTiktok" class="footer-social-link tt" aria-label="حساب تيك توك شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="تيك توك"><i class="fab fa-tiktok"></i></a>
             <a href="https://wa.me/966567798346" id="socialWhatsapp" class="footer-social-link wa" aria-label="واتساب شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://instagram.com" id="socialInstagram" class="footer-social-link ig" aria-label="انستقرام شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="انستقرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="socialInstagram" class="footer-social-link ig" aria-label="انستقرام شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="انستقرام"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
 
@@ -871,7 +804,7 @@
             </li>
             <li>
               <i class="fas fa-envelope"></i>
-              <a href="mailto:nokhba0567798346@gmail.com">nokhba0567798346@gmail.com</a>
+              <a href="mailto:alnkhbhlnqlalathathbalryadshrk@gmail.com">alnkhbhlnqlalathathbalryadshrk@gmail.com</a>
             </li>
             <li>
               <i class="fas fa-map-marker-alt"></i>
