@@ -150,12 +150,13 @@ function highlightActiveNav(navLinks, sections) {
 }
 
 /* ========================
-   MOBILE MENU DRAWER
+   MOBILE MENU DRAWER & BACKDROP
 ======================== */
 function initMobileMenu() {
   const hamburger = $('#hamburger');
   const navLinks = $('#navLinks');
   const overlay = $('#mobileOverlay');
+  const drawerClose = $('#drawerClose');
 
   if (!hamburger || !navLinks || !overlay) return;
 
@@ -180,6 +181,7 @@ function initMobileMenu() {
     isOpen ? closeMenu() : openMenu();
   });
 
+  drawerClose?.addEventListener('click', closeMenu);
   overlay.addEventListener('click', closeMenu);
 
   $$('.nav-link', navLinks).forEach(link => {
