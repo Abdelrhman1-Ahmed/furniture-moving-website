@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.elnokhba-moving.com/</loc>
+    <loc>https://alnokhba-furniture-moving.vercel.app/</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     
     <!-- Image 1: Logo -->
     <image:image>
-      <image:loc>https://www.elnokhba-moving.com/images/logo.png</image:loc>
+      <image:loc>https://alnokhba-furniture-moving.vercel.app/images/logo.png</image:loc>
       <image:title>شعار شركة النخبة لنقل الأثاث بالرياض</image:title>
       <image:caption>شركة النخبة لنقل الأثاث بالرياض - خدمات فك وتركيب وتغليف الأثاث</image:caption>
     </image:image>
     
     <!-- Image 2: Hero Truck -->
     <image:image>
-      <image:loc>https://www.elnokhba-moving.com/images/hero_truck.jpg</image:loc>
+      <image:loc>https://alnokhba-furniture-moving.vercel.app/images/hero_truck.jpg</image:loc>
       <image:title>شاحنة نقل أثاث مغلقة بالرياض</image:title>
       <image:caption>دينا نقل عفش مغلقة وآمنة لنقل الأثاث في جميع أحياء الرياض</image:caption>
     </image:image>
 
     <!-- Image 3: Packing -->
     <image:image>
-      <image:loc>https://www.elnokhba-moving.com/images/packing.png</image:loc>
+      <image:loc>https://alnokhba-furniture-moving.vercel.app/images/packing.png</image:loc>
       <image:title>تغليف الأثاث والعفش بأجود المواد</image:title>
       <image:caption>خدمة تغليف العفش لحمايته أثناء النقل بفقاعات النايلون والكرتون المقوى</image:caption>
     </image:image>
 
     <!-- Image 4: Moving -->
     <image:image>
-      <image:loc>https://www.elnokhba-moving.com/images/moving.png</image:loc>
+      <image:loc>https://alnokhba-furniture-moving.vercel.app/images/moving.png</image:loc>
       <image:title>نقل العفش والأثاث المنزلي بالرياض</image:title>
       <image:caption>خدمة نقل الأثاث المنزلي والمكتبي بالرياض بإشراف عمالة فنية مدربة</image:caption>
     </image:image>
 
     <!-- Image 5: Assembly -->
     <image:image>
-      <image:loc>https://www.elnokhba-moving.com/images/assembly.png</image:loc>
+      <image:loc>https://alnokhba-furniture-moving.vercel.app/images/assembly.png</image:loc>
       <image:title>فك وتركيب الأثاث والمطابخ</image:title>
       <image:caption>فك وتركيب غرف النوم والمطابخ والأجهزة الكهربائية بأيدي نجارين محترفين</image:caption>
     </image:image>
 
     <!-- Image 6: Storage -->
     <image:image>
-      <image:loc>https://www.elnokhba-moving.com/images/storage.png</image:loc>
+      <image:loc>https://alnokhba-furniture-moving.vercel.app/images/storage.png</image:loc>
       <image:title>تخزين الأثاث بمستودعات مؤمنة</image:title>
       <image:caption>مستودعات مؤمنة ونظيفة لتخزين الأثاث بالرياض لفترات قصيرة أو طويلة</image:caption>
     </image:image>
