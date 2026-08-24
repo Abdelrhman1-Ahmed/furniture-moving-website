@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryLightbox();
   initContactForm();
   initBackToTop();
+  initFloatingButtonsBehavior();
   updateContactLinks();
   updateSocialLinks();
   updateYear();
@@ -378,6 +379,45 @@ function initBackToTop() {
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+}
+
+/* ========================
+   FLOATING BUTTONS SMART BEHAVIOR ON MOBILE
+======================== */
+function initFloatingButtonsBehavior() {
+  const floatingBtns = $('#floatingButtons');
+  const contactSection = $('#contact');
+  if (!floatingBtns) return;
+
+  // 1. Hide floating buttons when input is focused on mobile
+  const inputs = $$('input, select, textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      if (window.innerWidth <= 768) {
+        floatingBtns.classList.add('hide-mobile');
+      }
+    });
+    input.addEventListener('blur', () => {
+      if (window.innerWidth <= 768) {
+        floatingBtns.classList.remove('hide-mobile');
+      }
+    });
+  });
+
+  // 2. Hide floating buttons when scrolled into contact section on mobile
+  if (contactSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && window.innerWidth <= 768) {
+          floatingBtns.classList.add('hide-mobile');
+        } else {
+          floatingBtns.classList.remove('hide-mobile');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(contactSection);
+  }
 }
 
 /* ========================
