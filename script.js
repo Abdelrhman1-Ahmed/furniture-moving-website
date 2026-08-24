@@ -1,33 +1,30 @@
 /* =====================================================
    شركة النخبة لنقل وتخزين الأثاث بالرياض
-   Main JavaScript - Fast, Modern & Interactive
-   Version: 2.0 (Official Production Edition)
+   Main JavaScript - Clean, Fast & Production Ready
+   Version: 3.0 (Vercel & SEO Optimized Edition)
 ===================================================== */
 
-'use strict'
+'use strict';
 
 /* ========================
    GLOBAL CONFIGURATION
-   ✏️ قم بتعديل هذه القيم لتحديث أرقام وبيانات الموقع والسوشيال ميديا دفعة واحدة
 ======================== */
 const CONFIG = {
   phone: '+966567798346',
   phoneDisplay: '0567798346',
   whatsapp: '966567798346',
   email: 'alnkhbhlnqlalathathbalryadshrk@gmail.com',
-  companyName: 'شركة النخبة لنقل وتخزين الأثاث',
+  companyName: 'شركة النخبة لنقل وتخزين الأثاث بالرياض',
   
-  // 🌐 روابط حسابات التواصل الاجتماعي الرسمية باسم النخبة
+  // 🌐 حسابات التواصل الاجتماعي الرسمية حصراً (TikTok & Instagram)
   social: {
-    facebook: 'https://facebook.com',      // رابط حساب الفيسبوك
-    twitter: 'https://x.com',              // رابط حساب تويتر / إكس
     tiktok: 'https://tiktok.com/@user505792731677',
     instagram: 'https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw=='
   },
 
   // رسالة الواتساب الترحيبية الافتراضية
   whatsappMessage: `مرحباً شركة النخبة لنقل الأثاث بالرياض،
-أود الاستفسار وحجز خدمة نقل أثاث.
+أود الاستفسار وحجز خدمة نقل عفش.
 هل يمكن تزويدي بالتفاصيل وعرض السعر؟ شكراً لكم.`
 };
 
@@ -46,11 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScrolling();
   initScrollAnimations();
   initStatCounters();
-  initReviewsSlider();
   initGalleryLightbox();
   initContactForm();
   initBackToTop();
-  initFloatingButtons();
   updateContactLinks();
   updateSocialLinks();
   updateYear();
@@ -87,20 +82,6 @@ function updateContactLinks() {
 }
 
 function updateSocialLinks() {
-  // Facebook
-  const fbElements = ['#topFacebook', '#cardFacebook', '#socialFacebook'];
-  fbElements.forEach(sel => {
-    const el = $(sel);
-    if (el && CONFIG.social.facebook) el.href = CONFIG.social.facebook;
-  });
-
-  // Twitter / X
-  const twElements = ['#topTwitter', '#cardTwitter', '#socialTwitter'];
-  twElements.forEach(sel => {
-    const el = $(sel);
-    if (el && CONFIG.social.twitter) el.href = CONFIG.social.twitter;
-  });
-
   // TikTok
   const ttElements = ['#topTiktok', '#cardTiktok', '#socialTiktok'];
   ttElements.forEach(sel => {
@@ -200,12 +181,10 @@ function initMobileMenu() {
 
   overlay.addEventListener('click', closeMenu);
 
-  // Close menu when clicking on any nav link
   $$('.nav-link', navLinks).forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
-  // Close with Escape key
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && navLinks.classList.contains('open')) {
       closeMenu();
@@ -236,7 +215,7 @@ function initSmoothScrolling() {
 }
 
 /* ========================
-   SCROLL ANIMATIONS (AOS)
+   SCROLL ANIMATIONS (AOS STABLE)
 ======================== */
 function initScrollAnimations() {
   const elements = $$('[data-aos]');
@@ -254,7 +233,7 @@ function initScrollAnimations() {
     });
   }, {
     threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    rootMargin: '0px 0px -30px 0px'
   });
 
   elements.forEach(el => observer.observe(el));
@@ -302,119 +281,6 @@ function animateCounter(el) {
 }
 
 /* ========================
-   REVIEWS SLIDER
-======================== */
-function initReviewsSlider() {
-  const track = $('#reviewsTrack');
-  const dotsContainer = $('#sliderDots');
-  const prevBtn = $('#prevBtn');
-  const nextBtn = $('#nextBtn');
-
-  if (!track || !dotsContainer) return;
-
-  const cards = $$('.review-card', track);
-  const totalCards = cards.length;
-  if (!totalCards) return;
-  let currentIndex = 0;
-  let autoplayTimer = null;
-
-  function getCardsPerView() {
-    if (window.innerWidth <= 680) return 1;
-    if (window.innerWidth <= 1080) return 2;
-    return 3;
-  }
-
-  let cardsPerView = getCardsPerView();
-  let totalSlides = Math.ceil(totalCards / cardsPerView);
-
-  function buildDots() {
-    dotsContainer.innerHTML = '';
-    totalSlides = Math.ceil(totalCards / cardsPerView);
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('button');
-      dot.classList.add('dot');
-      dot.setAttribute('aria-label', `عرض شريحة ${i + 1}`);
-      if (i === currentIndex) dot.classList.add('active');
-      dot.addEventListener('click', () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  function goToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
-    const cardWidth = cards[0].offsetWidth + 24; // gap width
-    const offset = currentIndex * cardsPerView * cardWidth;
-    track.style.transform = `translateX(${offset}px)`;
-
-    $$('.dot', dotsContainer).forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-
-  function nextSlide() {
-    const next = (currentIndex + 1) % totalSlides;
-    goToSlide(next);
-  }
-
-  function prevSlide() {
-    const prev = (currentIndex - 1 + totalSlides) % totalSlides;
-    goToSlide(prev);
-  }
-
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setInterval(nextSlide, 5000);
-  }
-
-  function stopAutoplay() {
-    if (autoplayTimer) clearInterval(autoplayTimer);
-  }
-
-  nextBtn?.addEventListener('click', () => { nextSlide(); startAutoplay(); });
-  prevBtn?.addEventListener('click', () => { prevSlide(); startAutoplay(); });
-
-  // Touch & Swipe Support
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  track.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].clientX;
-    stopAutoplay();
-  }, { passive: true });
-
-  track.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 40) {
-      diff > 0 ? nextSlide() : prevSlide();
-    }
-    startAutoplay();
-  }, { passive: true });
-
-  track.addEventListener('mouseenter', stopAutoplay);
-  track.addEventListener('mouseleave', startAutoplay);
-
-  // Responsive Resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      const newCPV = getCardsPerView();
-      if (newCPV !== cardsPerView) {
-        cardsPerView = newCPV;
-        currentIndex = 0;
-        buildDots();
-        goToSlide(0);
-      }
-    }, 200);
-  });
-
-  buildDots();
-  goToSlide(0);
-  startAutoplay();
-}
-
-/* ========================
    GALLERY LIGHTBOX
 ======================== */
 function initGalleryLightbox() {
@@ -432,7 +298,7 @@ function initGalleryLightbox() {
       const img = $('img', item);
       if (!img) return;
       lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt || 'معرض أعمال النخبة للنقل';
+      lightboxImg.alt = img.alt || 'معرض أعمال شركة النخبة لنقل الأثاث';
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
@@ -455,121 +321,42 @@ function initGalleryLightbox() {
 }
 
 /* ========================
-   CONTACT BOOKING FORM
+   CONTACT FORM & WHATSAPP SUBMIT
 ======================== */
 function initContactForm() {
   const form = $('#contactForm');
   if (!form) return;
 
-  const submitBtn = $('#submitBtn');
-  const formSuccess = $('#formSuccess');
-
-  function validateField(input, errorEl, message) {
-    if (!input || !input.value.trim()) {
-      input?.classList.add('error');
-      if (errorEl) errorEl.textContent = message || 'هذا الحقل مطلوب';
-      return false;
-    }
-    input.classList.remove('error');
-    if (errorEl) errorEl.textContent = '';
-    return true;
-  }
-
-  function validatePhone(input) {
-    if (!input) return false;
-    const val = input.value.trim().replace(/\s|-/g, '');
-    const saudiPhone = /^(05|5)[0-9]{8}$|^\+9665[0-9]{8}$/;
-    
-    if (!val) {
-      input.classList.add('error');
-      $('#phoneError').textContent = 'رقم الجوال مطلوب لتأكيد الحجز';
-      return false;
-    }
-    if (!saudiPhone.test(val)) {
-      input.classList.add('error');
-      $('#phoneError').textContent = 'يرجى إدخال رقم جوال سعودي صحيح (مثال: 0567798346)';
-      return false;
-    }
-    input.classList.remove('error');
-    $('#phoneError').textContent = '';
-    return true;
-  }
-
-  // Live input cleanup
-  $$('input, select, textarea', form).forEach(input => {
-    input.addEventListener('input', () => {
-      if (input.classList.contains('error')) {
-        input.classList.remove('error');
-        const errorEl = input.closest('.form-group')?.querySelector('.field-error');
-        if (errorEl) errorEl.textContent = '';
-      }
-    });
-  });
-
   form.addEventListener('submit', e => {
     e.preventDefault();
 
-    const nameInput = $('#clientName');
-    const phoneInput = $('#clientPhone');
-    const serviceInput = $('#clientService');
-    const fromAreaInput = $('#fromArea');
-    const toAreaInput = $('#toArea');
-    const messageInput = $('#clientMessage');
+    const name = $('#clientName')?.value.trim();
+    const phone = $('#clientPhone')?.value.trim();
+    const service = $('#clientService')?.value;
+    const fromArea = $('#fromArea')?.value.trim();
+    const toArea = $('#toArea')?.value.trim();
+    const message = $('#clientMessage')?.value.trim();
 
-    let isValid = true;
-
-    isValid = validateField(nameInput, $('#nameError'), 'يرجى إدخال الاسم الكريم (3 أحرف على الأقل)') && isValid;
-    if (nameInput && nameInput.value.trim().length < 3 && nameInput.value.trim()) {
-      nameInput.classList.add('error');
-      $('#nameError').textContent = 'الاسم يجب ألا يقل عن 3 أحرف';
-      isValid = false;
+    if (!name || !phone || !service || !fromArea || !toArea) {
+      alert('يرجى تعبئة كافة الحقول المطلوبة لتأكيد حجزك.');
+      return;
     }
 
-    isValid = validatePhone(phoneInput) && isValid;
-    isValid = validateField(serviceInput, $('#serviceError'), 'يرجى اختيار الخدمة المطلوبة') && isValid;
-
-    if (!isValid) return;
-
-    // Build custom WhatsApp booking message
-    const name     = nameInput?.value.trim() || '';
-    const phone    = phoneInput?.value.trim() || '';
-    const service  = serviceInput?.value.trim() || '';
-    const fromArea = fromAreaInput?.value.trim() || 'غير محدد';
-    const toArea   = toAreaInput?.value.trim() || 'غير محدد';
-    const notes    = messageInput?.value.trim() || 'لا توجد ملاحظات إضافية';
-
-    let waText = `🚚 *طلب حجز خدمة نقل أثاث - شركة النخبة*\n`;
-    waText += `━━━━━━━━━━━━━━━━━━━━━\n`;
-    waText += `👤 *الاسم:* ${name}\n`;
-    waText += `📱 *الجوال:* ${phone}\n`;
+    let waText = `*طلب نقل أثاث جديد - شركة النخبة بالرياض*\n\n`;
+    waText += `👤 *الاسم الكريم:* ${name}\n`;
+    waText += `📱 *رقم الجوال:* ${phone}\n`;
     waText += `🛠️ *الخدمة المطلوبة:* ${service}\n`;
     waText += `📍 *من حي:* ${fromArea}\n`;
-    waText += `🏁 *إلى حي:* ${toArea}\n`;
-    waText += `📝 *ملاحظات وتفاصيل:* ${notes}\n`;
-    waText += `━━━━━━━━━━━━━━━━━━━━━\n`;
-    waText += `يرجى تزويدي بعرض السعر وأقرب موعد متاح. شكراً لكم!`;
+    waText += `📍 *إلى حي:* ${toArea}\n`;
+    if (message) waText += `📝 *ملاحظات إضافية:* ${message}\n`;
 
-    const waUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(waText)}`;
-
-    // Feedback UI
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري تجهيز الطلب...';
+    const successMsg = $('#formSuccess');
+    if (successMsg) successMsg.style.display = 'block';
 
     setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب فوراً';
-      formSuccess.classList.add('show');
-      form.reset();
-
-      // Scroll to confirmation message
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      // Automatically open WhatsApp with the formulated order
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-      }, 1000);
-
-    }, 900);
+      const waUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(waText)}`;
+      window.open(waUrl, '_blank');
+    }, 800);
   });
 }
 
@@ -581,7 +368,7 @@ function initBackToTop() {
   if (!btn) return;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 350) {
+    if (window.scrollY > 400) {
       btn.classList.add('visible');
     } else {
       btn.classList.remove('visible');
@@ -594,113 +381,11 @@ function initBackToTop() {
 }
 
 /* ========================
-   FLOATING BUTTONS
-======================== */
-function initFloatingButtons() {
-  const floatingBtns = $('#floatingButtons');
-  if (!floatingBtns) return;
-
-  const hero = $('#home');
-  if (!hero) {
-    floatingBtns.style.opacity = '1';
-    return;
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        floatingBtns.style.opacity = '1';
-        floatingBtns.style.visibility = 'visible';
-        floatingBtns.style.transform = 'translateY(0)';
-      } else {
-        floatingBtns.style.opacity = '0';
-        floatingBtns.style.visibility = 'hidden';
-        floatingBtns.style.transform = 'translateY(20px)';
-      }
-    });
-  }, { threshold: 0.25 });
-
-  observer.observe(hero);
-
-  floatingBtns.style.transition = 'opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease';
-  floatingBtns.style.opacity = '0';
-  floatingBtns.style.visibility = 'hidden';
-}
-
-/* ========================
-   AUTO UPDATE YEAR
+   FOOTER YEAR UPDATE
 ======================== */
 function updateYear() {
-  const el = $('#currentYear');
-  if (el) el.textContent = new Date().getFullYear();
+  const yearEl = $('#currentYear');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 }
-
-/* ========================
-   CUSTOMER REVIEW ROUTING
-======================== */
-function initEliteReviewForm() {
-  const modal = document.getElementById('eliteReviewModal');
-  const openButton = document.getElementById('eliteOpenReview');
-  const closeButton = document.getElementById('eliteReviewClose');
-  const backdrop = document.getElementById('eliteReviewBackdrop');
-  const form = document.getElementById('eliteReviewForm');
-  const status = document.getElementById('eliteReviewStatus');
-  const qrImage = document.getElementById('eliteReviewQr');
-  const whatsappLink = document.getElementById('eliteReviewWhatsapp');
-
-  if (!modal || !form) return;
-
-  // ضع رابط Google Maps الحقيقي هنا عند توفره لتفعيل تحويل تقييمات 4 و5 نجوم.
-  const googleReviewUrl = '';
-  const managementWhatsapp = '966567798346';
-  const reviewPageUrl = `${window.location.origin}${window.location.pathname}#reviews`;
-
-  const openModal = () => {
-    modal.classList.add('is-open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeModal = () => {
-    modal.classList.remove('is-open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    form.reset();
-    status.textContent = '';
-  };
-
-  openButton?.addEventListener('click', openModal);
-  closeButton?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-  });
-
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const rating = Number(data.get('rating'));
-    if (!rating) {
-      status.textContent = 'يرجى اختيار عدد النجوم.';
-      return;
-    }
-
-    if (rating >= 4) {
-      if (googleReviewUrl) {
-        window.open(googleReviewUrl, '_blank', 'noopener,noreferrer');
-        closeModal();
-      } else {
-        status.textContent = 'شكراً لتقييمك. سيتم تفعيل رابط Google Maps قريباً.';
-      }
-      return;
-    }
-
-    const message = `تقييم جديد لشركة النخبة\nالاسم: ${data.get('name')}\nالجوال: ${data.get('phone')}\nالتقييم: ${rating}/5\nالتعليق: ${data.get('comment')}`;
-    window.open(`https://wa.me/${managementWhatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
-    status.textContent = 'تم إرسال ملاحظتك للإدارة بسرية. شكراً لك.';
-  });
-
-  if (qrImage) qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(reviewPageUrl)}`;
-  if (whatsappLink) whatsappLink.href = `https://wa.me/?text=${encodeURIComponent(`يمكنك تقييم خدمة شركة النخبة من هنا:\n${reviewPageUrl}`)}`;
-}
-
-document.addEventListener('DOMContentLoaded', initEliteReviewForm);
