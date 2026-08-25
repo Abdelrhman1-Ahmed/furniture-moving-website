@@ -1,5 +1,5 @@
 /* =====================================================
-   شركة النخبة لنقل وتخزين الأثاث بالرياض
+   شركة مرحال لنقل وتخزين الأثاث بالرياض
    Main JavaScript v4.0 — design-system edition
    Dialog semantics · focus management · inline validation
    Reduced-motion aware · no counters · single scroll system
@@ -16,7 +16,7 @@ const CONFIG = {
     instagram: 'https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw=='
   },
   whatsappMessage:
-    'مرحباً شركة النخبة لنقل الأثاث بالرياض،\nأود الاستفسار وحجز خدمة نقل عفش.\nهل يمكن تزويدي بالتفاصيل وعرض السعر؟ شكراً لكم.'
+    'مرحباً شركة مرحال لنقل الأثاث بالرياض،\nأود الاستفسار وحجز خدمة نقل عفش.\nهل يمكن تزويدي بالتفاصيل وعرض السعر؟ شكراً لكم.'
 };
 
 /* ======================== UTILITIES ======================== */
@@ -324,7 +324,7 @@ function initContactForm() {
     const toArea = $('#toArea').value.trim();
     const message = $('#clientMessage').value.trim();
 
-    let waText = '*طلب نقل أثاث جديد - شركة النخبة بالرياض*\n\n';
+    let waText = '*طلب نقل أثاث جديد - شركة مرحال بالرياض*\n\n';
     waText += `*الاسم:* ${name}\n`;
     waText += `*الجوال:* ${phone}\n`;
     waText += `*الخدمة المطلوبة:* ${service}\n`;
