@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="no-js">
 <head>
- <meta name="google-site-verification" content="1S9GLdK1HdFmdtW8_DOmVg0P6SZ8OwcuaF0TGHG8VO8" />
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#08252A" />
 
   <!-- ===================== SEO المحلي (الرياض) ===================== -->
   <title>شركة النخبة لنقل الأثاث بالرياض | فك وتركيب وتغليف آمن 24/7</title>
   <meta name="description" content="أفضل شركة نقل أثاث وعفش بالرياض. خدمات متكاملة تشمل فك وتركيب غرف النوم والمطابخ، التغليف الآمن، ونقل المكاتب بأحدث الشاحنات المغلقة وبضمان 100%. اتصل بنا الآن!" />
-  <meta name="keywords" content="شركة نقل اثاث بالرياض, نقل عفش بالرياض, فك وتركيب اثاث, تغليف عفش بالرياض, نقل عفش شمال الرياض, شركة نقل عفش مع الضمان, النخبه لنقل اثاث الرياض" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="شركة النخبة لنقل الأثاث بالرياض" />
   <link rel="canonical" href="https://www.elnokhba-moving.com/" />
+  <meta name="google-site-verification" content="1S9GLdK1HdFmdtW8_DOmVg0P6SZ8OwcuaF0TGHG8VO8" />
 
   <!-- ===================== Open Graph ===================== -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.elnokhba-moving.com/" />
   <meta property="og:title" content="شركة النخبة لنقل الأثاث بالرياض | دقة وأمان بدون عناء" />
   <meta property="og:description" content="خدمة نقل أثاث احترافي بالرياض مع الفك والتركيب والتغليف بأعلى معايير الجودة والالتزام التام بالموعد." />
-  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:image" content="images/og-cover.jpg" />
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:site_name" content="شركة النخبة لنقل الأثاث" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="شركة النخبة لنقل الأثاث بالرياض" />
-  <meta name="twitter:description" content="أفضل خدمات نقل العفش وفك وتركيب وتغليف الأثاث بالرياض بأسعار تنافسية وضمان شامـل" />
-  <meta name="twitter:image" content="images/logo.png" />
+  <meta name="twitter:description" content="أفضل خدمات نقل العفش وفك وتركيب وتغليف الأثاث بالرياض بأسعار تنافسية وضمان شامل" />
+  <meta name="twitter:image" content="images/og-cover.jpg" />
 
-  <!-- Google Fonts (Tajawal & Cairo) -->
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- Google Fonts (Tajawal) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Hero LCP preload -->
+  <link rel="preload" as="image" href="images/hero_truck.jpg" fetchpriority="high" />
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -84,707 +89,628 @@
     ]
   }
   </script>
- <meta name="google-site-verification" content="tcdXZRcWqmEyP45rSc4ey8-lEXUtoebg8guMX18Eza0" />
 </head>
 <body>
 
   <!-- ============================================================
-       NAVBAR (شريط التنقل الرئيسي)
+       ICON SPRITE — single source of truth.
+       Stroke icons: Lucide-style, 24x24 grid, stroke 2, round caps.
+       Brand icons: Simple Icons fills. Sized/colored via CSS only.
   ============================================================ -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-container">
-      <!-- Brand Logo -->
-      <a href="#home" class="logo" aria-label="شركة النخبة لنقل الأثاث - الصفحة الرئيسية">
-        <img src="images/logo.png" alt="شعار شركة النخبة لنقل الأثاث بالرياض" class="logo-img" width="56" height="56" />
-        <div class="logo-text">
-          <span class="logo-title">النخبة</span>
-          <span class="logo-sub">لنقل الأثاث بالرياض</span>
-        </div>
+  <svg xmlns="http://www.w3.org/2000/svg" hidden aria-hidden="true">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+      <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+      <symbol id="i-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><polyline points="17 2 12 7 7 2"/></symbol>
+      <symbol id="i-warehouse" viewBox="0 0 24 24"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect width="12" height="12" x="6" y="10"/></symbol>
+      <symbol id="i-user-check" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></symbol>
+      <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+      <symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+      <symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+      <symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></symbol>
+      <symbol id="i-crown" viewBox="0 0 24 24"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M5 20h14"/></symbol>
+      <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.46.09.9.23 1.33.41-.02.98-.04 1.96-.05 2.94-.42-.26-.88-.48-1.37-.6-1.55-.38-3.25.25-4.19 1.56-.53.74-.79 1.66-.73 2.57.09 1.32.81 2.53 1.92 3.23.83.53 1.85.74 2.82.55 1.51-.28 2.77-1.55 3.07-3.05.08-.42.11-.85.1-1.28-.01-3.36.01-6.72-.01-10.08-.02-1.49.55-2.96 1.55-4.06.99-1.11 2.4-1.83 3.89-2z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 5.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-5.919 5.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-5.919-5.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 5.919-5.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+  ============================================================ -->
+  <header class="header dark-scope" id="header">
+    <div class="container header-inner">
+
+      <a href="#home" class="brand" aria-label="شركة النخبة لنقل الأثاث - الصفحة الرئيسية">
+        <img src="images/logo.png" alt="شعار شركة النخبة لنقل الأثاث بالرياض" class="brand-img" width="42" height="43" />
+        <span>
+          <span class="brand-name">النخبة</span>
+          <span class="brand-sub">لنقل الأثاث بالرياض</span>
+        </span>
       </a>
 
-      <!-- Navigation Links Drawer -->
-      <ul class="nav-links" id="navLinks">
-        <div class="mobile-drawer-header">
-          <div class="drawer-brand">
-            <img src="images/logo.png" alt="شعار النخبة" width="38" height="38" />
-            <span>النخبة لنقل الأثاث</span>
-          </div>
-          <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة"><i class="fas fa-times"></i></button>
-        </div>
-        <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a></li>
-        <li><a href="#services" class="nav-link"><i class="fas fa-box-open"></i> خدماتنا</a></li>
-        <li><a href="#why" class="nav-link"><i class="fas fa-crown"></i> لماذا النخبة</a></li>
-        <li><a href="#areas" class="nav-link"><i class="fas fa-map-marker-alt"></i> أحياء الرياض</a></li>
-        <li><a href="#reviews" class="nav-link"><i class="fab fa-google"></i> تقييمات جوجل</a></li>
-        <li><a href="#gallery" class="nav-link"><i class="fas fa-camera"></i> معرض الأعمال</a></li>
-        <li><a href="#socialMedia" class="nav-link"><i class="fas fa-share-nodes"></i> حساباتنا</a></li>
-        <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> تواصل معنا</a></li>
-      </ul>
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="#home" class="nav-link">الرئيسية</a>
+        <a href="#services" class="nav-link">خدماتنا</a>
+        <a href="#why" class="nav-link">لماذا النخبة</a>
+        <a href="#areas" class="nav-link">أحياء الرياض</a>
+        <a href="#gallery" class="nav-link">معرض الأعمال</a>
+        <a href="#contact" class="nav-link">تواصل معنا</a>
+      </nav>
 
-      <!-- CTA Action Buttons -->
-      <div class="nav-actions">
-        <a href="https://wa.me/966567798346" id="navWhatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> واتساب
+      <div class="header-actions">
+        <a href="https://wa.me/966567798346" id="headerWhatsapp" class="icon-btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+          <svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
         </a>
-        <a href="tel:+966567798346" id="navCall" class="btn btn-call">
-          <i class="fas fa-phone-alt"></i> 0567798346
+        <a href="tel:+966567798346" id="headerCall" class="btn btn-secondary btn-sm header-call">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> <span class="num">0567798346</span>
         </a>
       </div>
 
-      <!-- Hamburger Menu for Mobile -->
-      <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="drawer">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- Mobile Overlay Backdrop -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-
-  <!-- ============================================================
-       FLOATING BUTTONS (مخصصة للجوال بدون حجب النموذج)
-  ============================================================ -->
-  <div class="floating-buttons" id="floatingButtons">
-    <a href="https://wa.me/966567798346" id="floatWhatsapp" class="float-btn float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="تواصل فوري عبر واتساب">
-      <i class="fab fa-whatsapp"></i>
-      <span class="float-label">واتساب سريع</span>
-    </a>
-    <a href="tel:+966567798346" id="floatCall" class="float-btn float-call" aria-label="اتصل بشركة النخبة">
-      <i class="fas fa-phone-alt"></i>
-      <span class="float-label">اتصل بنا</span>
-    </a>
-  </div>
-
-  <!-- Back To Top Button -->
-  <button id="backToTop" class="back-to-top" aria-label="العودة للأعلى">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- ============================================================
-       HERO SECTION
-  ============================================================ -->
-  <section class="hero" id="home">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer dark-scope" id="drawer" role="dialog" aria-modal="true" aria-label="قائمة التنقل" hidden>
+    <div class="drawer-head">
+      <span class="drawer-brand">
+        <img src="images/logo.png" alt="" width="34" height="35" />
+        النخبة لنقل الأثاث
+      </span>
+      <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة"><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button>
     </div>
-    <div class="container hero-container">
-      <div class="hero-content" data-aos="fade-right">
-        <div class="hero-badge">
-          <i class="fas fa-shield-halved"></i>
-          <span>الخيار الأول والموثوق لنقل العفش في الرياض</span>
-        </div>
-        <h1 class="hero-title">
-          نقل أثاث راقي ومضمون <br />
-          في جميع أحياء الرياض <span class="highlight">بدون عناء</span>
-        </h1>
-        <p class="hero-description">
-          نوفر لك تجربة نقل متكاملة وآمنة. يتولى فريقنا الفني من النجارين والعمالة الماهرة فك، نقل، وتغليف وإعادة تركيب كافة قطع أثاثك ومطبخك بأحدث المعدات وشاحنات النقل المغلقة لضمان سلامتها 100%.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary btn-large">
-            <i class="fas fa-calendar-check"></i> احجز موعدك الآن
-          </a>
-          <a href="https://wa.me/966567798346" id="heroWhatsapp" class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i> تواصل واتساب
-          </a>
-          <a href="tel:+966567798346" id="heroCall" class="btn btn-outline btn-large">
-            <i class="fas fa-phone-alt"></i> 0567798346
-          </a>
-        </div>
-        <div class="hero-trust">
-          <div class="trust-item">
-            <i class="fas fa-shield-alt"></i>
-            <span>ضمان سلامة القطع</span>
-          </div>
-          <div class="trust-item">
-            <i class="fas fa-clock"></i>
-            <span>التزام دقيق بالموعد</span>
-          </div>
-          <div class="trust-item">
-            <i class="fas fa-award"></i>
-            <span>نجارون وفنيون متمرسون</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image" data-aos="fade-left">
-        <div class="hero-img-wrapper">
-          <img src="images/hero_truck.jpg" alt="شاحنة نقل أثاث مغلقة - شركة النخبة بالرياض" width="560" height="400" loading="eager" />
-        </div>
-        <div class="hero-img-badge">
-          <i class="fas fa-star"></i>
-          <div>
-            <strong>4.9 / 5</strong>
-            <small>خدمة متميزة وموثوقة في الرياض</small>
-          </div>
-        </div>
-      </div>
+    <nav class="drawer-nav" aria-label="تنقل القائمة">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#why">لماذا النخبة</a>
+      <a href="#areas">أحياء الرياض</a>
+      <a href="#gallery">معرض الأعمال</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <div class="drawer-foot">
+      <a href="tel:+966567798346" id="drawerCall" class="btn btn-accent"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> اتصل بنا</a>
+      <a href="https://wa.me/966567798346" id="drawerWhatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg> واتساب</a>
     </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" />
-      </svg>
-    </div>
-  </section>
+  </aside>
 
-  <!-- ============================================================
-       STATISTICS SECTION
-  ============================================================ -->
-  <section class="stats-section" id="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
-          <div class="stat-icon"><i class="fas fa-users"></i></div>
-          <div class="stat-number-wrap">
-            <span class="stat-number" data-target="1500">0</span>
-            <span class="stat-plus">+</span>
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero dark-scope" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content" data-animate>
+          <p class="hero-badge"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> الخيار الموثوق لنقل العفش في الرياض</p>
+          <h1 class="hero-title">
+            نقل أثاث راقي ومضمون في جميع أحياء الرياض <em>بدون عناء</em>
+          </h1>
+          <p class="hero-desc">
+            يتولى فريقنا الفني فك ونقل وتغليف وإعادة تركيب أثاثك بأحدث المعدات وشاحنات النقل المغلقة، مع ضمان كامل لسلامة قطعك من أول لحظة وحتى التسليم.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-accent btn-lg">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-check"></use></svg> احجز موعدك الآن
+            </a>
+            <a href="https://wa.me/966567798346" id="heroWhatsapp" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg> تواصل واتساب
+            </a>
           </div>
-          <div class="stat-label">عميل سعيد في الرياض</div>
+          <ul class="hero-trust">
+            <li class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> ضمان سلامة القطع</li>
+            <li class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> التزام دقيق بالموعد</li>
+            <li class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg> نجارون وفنيون متمرسون</li>
+            <li>
+              <a href="tel:+966567798346" id="heroCall" class="trust-item">
+                <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+                <span dir="ltr">0567798346</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
-          <div class="stat-icon"><i class="fas fa-clock"></i></div>
-          <div class="stat-number-wrap">
-            <span class="stat-number">24</span>
-            <span class="stat-slash">/7</span>
+
+        <div class="hero-media" data-animate data-animate-delay="60">
+          <div class="hero-media-frame">
+            <img src="images/hero_truck.jpg" alt="شاحنة نقل أثاث مغلقة - شركة النخبة بالرياض" width="1024" height="436" fetchpriority="high" />
           </div>
-          <div class="stat-label">جاهزية كاملة على مدار الساعة</div>
-        </div>
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="stat-number-wrap">
-            <span class="stat-number" data-target="100">0</span>
-            <span class="stat-percent">%</span>
-          </div>
-          <div class="stat-label">ضمان الأمان وحفظ المقتنيات</div>
-        </div>
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="stat-icon"><i class="fas fa-truck-ramp-box"></i></div>
-          <div class="stat-number-wrap">
-            <span class="stat-number" data-target="15">0</span>
-            <span class="stat-plus">+</span>
-          </div>
-          <div class="stat-label">عاماً من الخبرة والاحترافية</div>
+          <p class="hero-rating"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg> 4.9/5 <small>تقييم عملائنا في الرياض</small></p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       SERVICES SECTION
-  ============================================================ -->
-  <section class="services-section section" id="services">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-box-open"></i> خدماتنا المتكاملة</span>
-        <h2 class="section-title">خدمات نقل أثاث احترافية تلبي تطلعاتك</h2>
-        <p class="section-subtitle">حلول هندسية وعملية لنقل العفش بأمان كامل ودقة عالية في كافة أحياء الرياض</p>
-      </div>
-      <div class="services-grid">
-
-        <!-- الخدمة 1 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-img-wrap">
-            <img src="images/moving.png" alt="خدمة نقل الأثاث والعفش المنزلي بالرياض" width="360" height="220" loading="lazy" />
-            <div class="service-icon-badge"><i class="fas fa-couch"></i></div>
+    <!-- ============================================================
+         STATS BAND
+    ============================================================ -->
+    <section class="stats" aria-label="أرقامنا">
+      <div class="container">
+        <div class="stats-grid" data-animate>
+          <div class="stat">
+            <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg>
+            <span class="stat-num" dir="ltr">1500+</span>
+            <span class="stat-label">عميل سعيد في الرياض</span>
           </div>
-          <div class="service-card-body">
-            <h3>نقل الأثاث والعفش المنزلي</h3>
-            <p>نقل أثاث الفلل والشقق بأحدث الشاحنات المغلقة والمجهزة لحماية كافة قطع الأثاث من الأتربة والخدوش.</p>
-            <a href="#contact" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
+          <div class="stat">
+            <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+            <span class="stat-num" dir="ltr">24/7</span>
+            <span class="stat-label">جاهزية على مدار الساعة</span>
           </div>
-        </div>
-
-        <!-- الخدمة 2 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-img-wrap">
-            <img src="images/assembly.png" alt="خدمة فك وتركيب الأثاث والمطابخ" width="360" height="220" loading="lazy" />
-            <div class="service-icon-badge"><i class="fas fa-screwdriver-wrench"></i></div>
+          <div class="stat">
+            <svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg>
+            <span class="stat-num" dir="ltr">100%</span>
+            <span class="stat-label">ضمان السلامة والحفظ</span>
           </div>
-          <div class="service-card-body">
-            <h3>فك وتركيب الأثاث والمطابخ</h3>
-            <p>فنيون نجارون خبراء لفك وتركيب غرف النوم، المطابخ الجاهزة والتفصيل، والستائر والدواليب بإتقان تام.</p>
-            <a href="#contact" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
+          <div class="stat">
+            <svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg>
+            <span class="stat-num" dir="ltr">15+</span>
+            <span class="stat-label">عاماً من الخبرة</span>
           </div>
-        </div>
-
-        <!-- الخدمة 3 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-img-wrap">
-            <img src="images/packing.png" alt="خدمة التغليف الشامل والآمن" width="360" height="220" loading="lazy" />
-            <div class="service-icon-badge"><i class="fas fa-boxes-packing"></i></div>
-          </div>
-          <div class="service-card-body">
-            <h3>التغليف الشامل والآمن</h3>
-            <p>تغليف متكامل باستخدام أجود خامات التغليف البلاستيكي، الفقاعات، والكرتون المقوى لحماية الزجاج والتحف.</p>
-            <a href="#contact" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
-          </div>
-        </div>
-
-        <!-- الخدمة 4 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-img-wrap">
-            <img src="images/office.jpg" alt="خدمة نقل المكاتب والشركات" width="360" height="220" loading="lazy" />
-            <div class="service-icon-badge"><i class="fas fa-building"></i></div>
-          </div>
-          <div class="service-card-body">
-            <h3>نقل المكاتب والشركات</h3>
-            <p>تنظيم وسرعة في نقل مكاتب ومحتويات الشركات والمؤسسات لضمان استمرار أعمالك دون تعطيل.</p>
-            <a href="#contact" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
-          </div>
-        </div>
-
-        <!-- الخدمة 5 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-img-wrap">
-            <img src="images/ac.jpg" alt="خدمة نقل المكيفات والأجهزة الكهربائية" width="360" height="220" loading="lazy" />
-            <div class="service-icon-badge"><i class="fas fa-tv"></i></div>
-          </div>
-          <div class="service-card-body">
-            <h3>نقل المكيفات والأجهزة</h3>
-            <p>فك ونقل وإعادة تركيب مكيفات السبلت والشباك والأجهزة الحساسة بأساليب آمنة تضمن سلامة أداء الجهاز.</p>
-            <a href="#contact" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
-          </div>
-        </div>
-
-        <!-- الخدمة 6 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-img-wrap">
-            <img src="images/storage.png" alt="خدمة تخزين الأثاث المؤمّن" width="360" height="220" loading="lazy" />
-            <div class="service-icon-badge"><i class="fas fa-warehouse"></i></div>
-          </div>
-          <div class="service-card-body">
-            <h3>تخزين الأثاث المؤمّن</h3>
-            <p>مستودعات مجهزة ومؤمنة بكاميرات مراقبة وأنظمة مكافحة الحريق لحفظ الأثاث بالفترة التي تناسبك.</p>
-            <a href="#contact" class="service-link">اطلب الخدمة الآن <i class="fas fa-arrow-left"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       WHY CHOOSE US
-  ============================================================ -->
-  <section class="why-us section" id="why">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-crown"></i> مميزات النخبة</span>
-        <h2 class="section-title">لماذا تختار شركة النخبة لنقل أثاثك؟</h2>
-        <p class="section-subtitle">نجمع بين الخبرة الميدانية، المعدات الحديثة، والالتزام المطلق لتحقيق راحتك</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="why-icon"><i class="fas fa-user-check"></i></div>
-          <h3>فنيون ونجارون متخصصون</h3>
-          <p>فريق عمل مدرب ومحترف يتولى التعامل مع أدق تفاصيل الفك والتركيب والتغليف بخبرة عالية.</p>
-        </div>
-        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="why-icon"><i class="fas fa-truck-fast"></i></div>
-          <h3>شاحنات مجهزة ومغلقة</h3>
-          <p>أسطول نقل حديث بأحجام متدرجة ومبطن من الداخل لحماية مقتنياتك أثناء التنقل على الطرقات.</p>
-        </div>
-        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="why-icon"><i class="fas fa-tags"></i></div>
-          <h3>أسعار تنافسية وواضحة</h3>
-          <p>عروض أسعار شفافة ومباشرة بناءً على حجم الأثاث ودون أي تكاليف أو مفاجآت خفية.</p>
-        </div>
-        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="why-icon"><i class="fas fa-headset"></i></div>
-          <h3>استجابة سريعة 24/7</h3>
-          <p>فريق خدمة عملاء متواجد على مدار الساعة للرد فوراً على استفساراتك وتأكيد حجزك.</p>
-        </div>
-        <div class="why-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="why-icon"><i class="fas fa-handshake-angle"></i></div>
-          <h3>دقة التزام بالوقت</h3>
-          <p>نصلك في الوقت المحدد بالضبط وننجز عملية النقل بسرعة دون المساومة على جودة العمل.</p>
-        </div>
-        <div class="why-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="why-icon"><i class="fas fa-certificate"></i></div>
-          <h3>ضمان كامل للمقتنيات</h3>
-          <p>نتحمل المسئولية الكاملة لسلامة كل قطعة أثاث من لحظة الاستلام وحتى تسليمها في موقعك الجديد.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       AREAS SECTION
-  ============================================================ -->
-  <section class="areas-section section" id="areas">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-location-dot"></i> التغطية الجغرافية</span>
-        <h2 class="section-title">نغطي كافة أحياء ومناطق الرياض</h2>
-        <p class="section-subtitle">أسطول النخبة متواجد بالقرب منك لضمان الوصول السريع وتنفيذ الطلب فوراً</p>
-      </div>
-      <div class="areas-grid">
-        <div class="area-card" data-aos="zoom-in" data-aos-delay="0">
-          <i class="fas fa-map-pin"></i> <span>شمال الرياض (النرجس، الملقا، الياسمين، العارض، حطين)</span>
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-badge"><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg> خدماتنا المتكاملة</span>
+          <h2 class="section-title">خدمات نقل أثاث احترافية تلبي تطلعاتك</h2>
+          <p class="section-subtitle">حلول عملية لنقل العفش بأمان كامل ودقة عالية في كافة أحياء الرياض</p>
         </div>
-        <div class="area-card" data-aos="zoom-in" data-aos-delay="100">
-          <i class="fas fa-map-pin"></i> <span>شرق الرياض (الرمال، الروضة، الحمراء، المونسية، إشبيلية)</span>
-        </div>
-        <div class="area-card" data-aos="zoom-in" data-aos-delay="200">
-          <i class="fas fa-map-pin"></i> <span>وسط وجنوب الرياض (العليا، السليمانية، العزيزية، الشفا)</span>
-        </div>
-        <div class="area-card" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fas fa-map-pin"></i> <span>غرب الرياض (ظهرة لبن، طويق، السويدي، العريجاء)</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============================================================
-       CUSTOMER REVIEWS (Google Business Profile Placeholder)
-  ============================================================ -->
-  <section class="reviews-section section" id="reviews">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fab fa-google"></i> تقييمات العملاء</span>
-        <h2 class="section-title">آراء عملائنا عبر جوجل (Google Business Profile)</h2>
-        <p class="section-subtitle">ثقة عملائنا في الرياض هي رأس مالنا. هذا القسم مخصص لربط تقييمات وآراء العملاء الحقيقية فور توفير رابط ملف جوجل للشركات.</p>
-      </div>
-      
-      <div class="google-review-placeholder-card" data-aos="zoom-in">
-        <div class="google-badge-header">
-          <div class="google-icon-wrapper">
-            <i class="fab fa-google"></i>
-          </div>
-          <div class="google-rating-info">
-            <div class="stars-gold">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <span>(5.0)</span>
+        <div class="services-grid" data-animate>
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/moving.jpg" alt="خدمة نقل الأثاث والعفش المنزلي بالرياض" width="800" height="800" loading="lazy" />
             </div>
-            <h3>شركة النخبة لنقل الأثاث بالرياض</h3>
-            <p>ملف تجاري معتمد لدى جوجل للشركات (Google Business Profile)</p>
-          </div>
-        </div>
-        <div class="google-placeholder-body">
-          <p class="placeholder-notice"><i class="fas fa-info-circle"></i> المساحة مجهزة ومصممة لعرض تقييمات ومراجعات العملاء فور إضافة رابط جوجل المعتمد.</p>
-          <a href="#" class="btn btn-primary btn-google-link disabled-placeholder" onclick="event.preventDefault(); alert('سيتم تفعيل الرابط فور إدراج ملف جوجل للشركات الرسمي.');">
-            <i class="fab fa-google"></i> رابط تقييمات جوجل (قريباً)
-          </a>
+            <div class="service-body">
+              <h3 class="service-title"><svg class="icon" aria-hidden="true"><use href="#i-sofa"></use></svg> نقل الأثاث والعفش المنزلي</h3>
+              <p>نقل أثاث الفلل والشقق بأحدث الشاحنات المغلقة والمجهزة لحماية القطع من الأتربة والخدوش.</p>
+              <a href="#contact" class="service-link">اطلب الخدمة الآن <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/assembly.jpg" alt="خدمة فك وتركيب الأثاث والمطابخ" width="800" height="800" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title"><svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg> فك وتركيب الأثاث والمطابخ</h3>
+              <p>فنيون نجارون خبراء لفك وتركيب غرف النوم والمطابخ والستائر والدواليب بإتقان تام.</p>
+              <a href="#contact" class="service-link">اطلب الخدمة الآن <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/packing.jpg" alt="خدمة التغليف الشامل والآمن" width="800" height="800" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title"><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg> التغليف الشامل والآمن</h3>
+              <p>تغليف متكامل بأجود خامات البلاستيك والفقاعات والكرتون المقوى لحماية الزجاج والتحف.</p>
+              <a href="#contact" class="service-link">اطلب الخدمة الآن <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/office.jpg" alt="خدمة نقل المكاتب والشركات" width="800" height="341" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title"><svg class="icon" aria-hidden="true"><use href="#i-building"></use></svg> نقل المكاتب والشركات</h3>
+              <p>تنظيم وسرعة في نقل مكاتب ومحتويات الشركات لضمان استمرار أعمالك دون تعطيل.</p>
+              <a href="#contact" class="service-link">اطلب الخدمة الآن <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/ac.jpg" alt="خدمة نقل المكيفات والأجهزة الكهربائية" width="800" height="341" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title"><svg class="icon" aria-hidden="true"><use href="#i-tv"></use></svg> نقل المكيفات والأجهزة</h3>
+              <p>فك ونقل وإعادة تركيب المكيفات والأجهزة الحساسة بأساليب آمنة تضمن استمرار أدائها.</p>
+              <a href="#contact" class="service-link">اطلب الخدمة الآن <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-media">
+              <img src="images/storage.jpg" alt="خدمة تخزين الأثاث المؤمّن" width="800" height="800" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title"><svg class="icon" aria-hidden="true"><use href="#i-warehouse"></use></svg> تخزين الأثاث المؤمّن</h3>
+              <p>مستودعات مجهزة بكاميرات مراقبة وأنظمة مكافحة حريق لحفظ أثاثك للمدة التي تناسبك.</p>
+              <a href="#contact" class="service-link">اطلب الخدمة الآن <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg></a>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ============================================================
+         WHY CHOOSE US
+    ============================================================ -->
+    <section class="section why-section" id="why">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-badge"><svg class="icon" aria-hidden="true"><use href="#i-crown"></use></svg> مميزات النخبة</span>
+          <h2 class="section-title">لماذا تختار شركة النخبة لنقل أثاثك؟</h2>
+          <p class="section-subtitle">نجمع بين الخبرة الميدانية والمعدات الحديثة والالتزام المطلق لتحقيق راحتك</p>
+        </div>
 
-  <!-- ============================================================
-       GALLERY SECTION
-  ============================================================ -->
-  <section class="gallery-section section" id="gallery">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-camera"></i> معرض الأعمال</span>
-        <h2 class="section-title">من أعمالنا الميدانية بالرياض</h2>
-        <p class="section-subtitle">صور حية تعكس دقة واحترافية عمليات الفك والتغليف والنقل التي ينفذها فريقنا</p>
+        <div class="why-grid" data-animate>
+          <article class="why-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-user-check"></use></svg> فنيون ونجارون متخصصون</h3>
+            <p>فريق مدرب ومحترف يتولى أدق تفاصيل الفك والتركيب والتغليف بخبرة عالية.</p>
+          </article>
+          <article class="why-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg> شاحنات مجهزة ومغلقة</h3>
+            <p>أسطول حديث بأحجام متدرجة ومبطن من الداخل لحماية مقتنياتك أثناء النقل.</p>
+          </article>
+          <article class="why-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-tag"></use></svg> أسعار تنافسية وواضحة</h3>
+            <p>عروض سعر شفافة بناءً على حجم الأثاث ودون أي تكاليف أو مفاجآت خفية.</p>
+          </article>
+          <article class="why-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-headphones"></use></svg> استجابة سريعة 24/7</h3>
+            <p>فريق خدمة عملاء متواجد على مدار الساعة للرد فوراً وتأكيد حجزك.</p>
+          </article>
+          <article class="why-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-timer"></use></svg> دقة الالتزام بالوقت</h3>
+            <p>نصلك في الوقت المحدد وننجز النقل بسرعة دون المساومة على الجودة.</p>
+          </article>
+          <article class="why-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-badge-check"></use></svg> ضمان كامل للمقتنيات</h3>
+            <p>نتحمل المسؤولية الكاملة لسلامة كل قطعة من الاستلام وحتى التسليم.</p>
+          </article>
+        </div>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="0">
-          <img src="images/moving.png" alt="نقل أثاث احترافي بالرياض - شركة النخبة" width="400" height="300" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="fas fa-expand-alt"></i>
-            <span>نقل الأثاث والعفش</span>
-          </div>
+    </section>
+
+    <!-- ============================================================
+         AREAS (chip cloud)
+    ============================================================ -->
+    <section class="section" id="areas">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-badge"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> التغطية الجغرافية</span>
+          <h2 class="section-title">نغطي كافة أحياء ومناطق الرياض</h2>
+          <p class="section-subtitle">أسطول النخبة متواجد بالقرب منك لضمان الوصول السريع وتنفيذ الطلب فوراً</p>
         </div>
-        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-          <img src="images/packing.png" alt="تغليف أثاث احترافي بالفقاعات والكرتون" width="400" height="300" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="fas fa-expand-alt"></i>
-            <span>التغليف الشامل والآمن</span>
-          </div>
+
+        <ul class="areas-cloud" data-animate>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> النرجس</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الملقا</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الياسمين</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> العارض</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> حطين</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الرمال</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الروضة</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الحمراء</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> المونسية</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> إشبيلية</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> العليا</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> السليمانية</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> العزيزية</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الشفا</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> ظهرة لبن</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> طويق</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> السويدي</li>
+          <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> العريجاء</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALLERY
+    ============================================================ -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-badge"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> معرض الأعمال</span>
+          <h2 class="section-title">من أعمالنا الميدانية بالرياض</h2>
+          <p class="section-subtitle">صور حية تعكس دقة واحترافية عمليات الفك والتغليف والنقل التي ينفذها فريقنا</p>
         </div>
-        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-          <img src="images/assembly.png" alt="فك وتركيب غرف نوم ومطابخ بالرياض" width="400" height="300" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="fas fa-expand-alt"></i>
-            <span>فك وتركيب احترافي</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-          <img src="images/storage.png" alt="مستودعات تخزين الأثاث بالرياض" width="400" height="300" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="fas fa-expand-alt"></i>
-            <span>تخزين أثاث مؤمن</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-          <img src="images/hero_truck.jpg" alt="شاحنة نقل شركة النخبة المجهزة بالرياض" width="400" height="300" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="fas fa-expand-alt"></i>
-            <span>أسطول النخبة المجهز</span>
-          </div>
-        </div>
-        <div class="gallery-item gallery-item-large" data-aos="zoom-in" data-aos-delay="500">
-          <div class="gallery-cta-card">
-            <i class="fas fa-truck-fast"></i>
+
+        <div class="gallery-grid" data-animate>
+          <button type="button" class="gallery-item" data-index="0">
+            <img src="images/moving.jpg" alt="نقل أثاث احترافي بالرياض - شركة النخبة" width="800" height="600" loading="lazy" />
+            <span class="gallery-caption"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"></use></svg> نقل الأثاث والعفش</span>
+          </button>
+          <button type="button" class="gallery-item" data-index="1">
+            <img src="images/packing.jpg" alt="تغليف أثاث احترافي بالفقاعات والكرتون" width="800" height="600" loading="lazy" />
+            <span class="gallery-caption"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"></use></svg> التغليف الشامل والآمن</span>
+          </button>
+          <button type="button" class="gallery-item" data-index="2">
+            <img src="images/assembly.jpg" alt="فك وتركيب غرف نوم ومطابخ بالرياض" width="800" height="600" loading="lazy" />
+            <span class="gallery-caption"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"></use></svg> فك وتركيب احترافي</span>
+          </button>
+          <button type="button" class="gallery-item" data-index="3">
+            <img src="images/storage.jpg" alt="مستودعات تخزين الأثاث بالرياض" width="800" height="600" loading="lazy" />
+            <span class="gallery-caption"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"></use></svg> تخزين أثاث مؤمّن</span>
+          </button>
+          <button type="button" class="gallery-item" data-index="4">
+            <img src="images/hero_truck.jpg" alt="شاحنة نقل شركة النخبة المجهزة بالرياض" width="800" height="341" loading="lazy" />
+            <span class="gallery-caption"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"></use></svg> أسطول النخبة المجهز</span>
+          </button>
+          <div class="gallery-cta">
+            <svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg>
             <h3>احجز موعد نقلك الآن</h3>
-            <p>تواصل مباشرة مع المشرف للحصول على أفضل سعر وأسرع خدمة</p>
-            <a href="tel:+966567798346" id="galleryCta" class="btn btn-primary">
-              <i class="fas fa-phone-alt"></i> اتصل بنا الآن
+            <p>تواصل مباشرة للحصول على أفضل سعر وأسرع خدمة</p>
+            <a href="tel:+966567798346" id="galleryCta" class="btn btn-accent">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> اتصل بنا الآن
             </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Lightbox Popup -->
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-overlay" id="lightboxOverlay"></div>
-    <div class="lightbox-content">
-      <img src="" alt="" id="lightboxImg" />
-      <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق المعرض"><i class="fas fa-times"></i></button>
+    <!-- Lightbox dialog -->
+    <div class="lightbox dark-scope" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض صورة من معرض الأعمال" hidden>
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <figure class="lightbox-figure">
+        <img src="" alt="" id="lightboxImg" />
+        <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق العرض"><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="الصورة السابقة"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="الصورة التالية"><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg></button>
     </div>
-  </div>
 
-  <!-- ============================================================
-       SOCIAL MEDIA COMMUNITY BANNER
-  ============================================================ -->
-  <section class="section" id="socialMedia" style="padding-bottom: 0;">
-    <div class="container">
-      <div class="social-banner" data-aos="fade-up">
-        <div class="social-banner-header">
-          <span class="section-badge" style="background: rgba(200,155,60,0.2); color: var(--gold-light); border-color: rgba(200,155,60,0.35);">
-            <i class="fas fa-share-nodes"></i> تواصل معنا رقمياً
-          </span>
-          <h3>تابع شركة النخبة على المنصات الرسمية</h3>
-          <p>شاهد توثيق أعمالنا الميدانية في نقل وتغليف الأثاث بالرياض عبر حساباتنا الرسمية</p>
+    <!-- ============================================================
+         SOCIAL STRIP
+    ============================================================ -->
+    <section class="social-strip dark-scope" id="socialMedia" aria-label="حساباتنا الرسمية">
+      <div class="container social-strip-inner" data-animate>
+        <div class="social-strip-text">
+          <h2>تابع شركة النخبة على المنصات الرسمية</h2>
+          <p>توثيق يومي لأعمالنا الميدانية في نقل وتغليف الأثاث بالرياض</p>
         </div>
-        <div class="social-cards-grid two-cards">
-
-          <!-- TikTok -->
-          <a href="https://tiktok.com/@user505792731677" id="cardTiktok" class="social-card-box tt" target="_blank" rel="noopener noreferrer" aria-label="حساب تيك توك شركة النخبة لنقل الأثاث">
-            <div class="social-card-icon"><i class="fab fa-tiktok"></i></div>
-            <div class="social-card-info">
-              <h4>تيك توك | TikTok</h4>
-              <span>فيديوهات وتغطيات النقل</span>
-            </div>
-            <div class="social-card-action"><i class="fas fa-arrow-left"></i> مشاهدة</div>
+        <div class="social-strip-actions">
+          <a href="https://tiktok.com/@user505792731677" id="cardTiktok" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-fill" aria-hidden="true"><use href="#i-tiktok"></use></svg> تيك توك
           </a>
-
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="cardInstagram" class="social-card-box ig" target="_blank" rel="noopener noreferrer" aria-label="حساب انستقرام شركة النخبة لنقل الأثاث">
-            <div class="social-card-icon"><i class="fab fa-instagram"></i></div>
-            <div class="social-card-info">
-              <h4>انستقرام | Instagram</h4>
-              <span>صور وأحدث الأعمال</span>
-            </div>
-            <div class="social-card-action"><i class="fas fa-arrow-left"></i> متابعة</div>
+          <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="cardInstagram" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-fill" aria-hidden="true"><use href="#i-instagram"></use></svg> انستقرام
           </a>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-       CONTACT SECTION
-  ============================================================ -->
-  <section class="contact-section section" id="contact">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-badge"><i class="fas fa-paper-plane"></i> احجز الآن</span>
-        <h2 class="section-title">احصل على تسعيرة فورية ومباشرة</h2>
-        <p class="section-subtitle">أدخل تفاصيل طلبك وسيقوم فريق النخبة بالرد عليك عبر الواتساب فوراً بأفضل عرض سعر</p>
-      </div>
-      <div class="contact-grid">
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-badge"><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg> احجز الآن</span>
+          <h2 class="section-title">احصل على تسعيرة فورية ومباشرة</h2>
+          <p class="section-subtitle">أدخل تفاصيل طلبك وسيقوم فريق النخبة بالرد عليك عبر الواتساب فوراً بأفضل عرض سعر</p>
+        </div>
 
-        <!-- Contact Info & Map -->
-        <div class="contact-info" data-aos="fade-right">
-          <h3>معلومات التواصل المباشر</h3>
-          <div class="contact-items">
-            <a href="tel:+966567798346" id="contactPhone" class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
-              <div>
-                <span class="contact-item-label">اتصال هاتفي مباشر</span>
-                <span class="contact-item-value">0567798346</span>
+        <div class="contact-grid" data-animate>
+
+          <!-- Contact info column -->
+          <div class="contact-info">
+            <h3 class="contact-info-title">معلومات التواصل المباشر</h3>
+            <div class="contact-list">
+              <a href="tel:+966567798346" id="contactPhone" class="contact-row">
+                <span class="contact-dot"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+                <span>
+                  <small>اتصال هاتفي مباشر</small>
+                  <strong class="ltr">0567798346</strong>
+                </span>
+              </a>
+              <a href="https://wa.me/966567798346" id="contactWhatsapp" class="contact-row" target="_blank" rel="noopener noreferrer">
+                <span class="contact-dot wa"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+                <span>
+                  <small>مراسلة فورية عبر واتساب</small>
+                  <strong class="ltr">+966 56 779 8346</strong>
+                </span>
+              </a>
+              <a href="mailto:alnkhbhlnqlalathathbalryadshrk@gmail.com" id="contactEmail" class="contact-row">
+                <span class="contact-dot"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+                <span>
+                  <small>البريد الإلكتروني الرسمي</small>
+                  <strong class="ltr">alnkhbhlnqlalathathbalryadshrk@gmail.com</strong>
+                </span>
+              </a>
+              <div class="contact-row">
+                <span class="contact-dot"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+                <span>
+                  <small>المقر وأوقات العمل</small>
+                  <strong>الرياض — خدمة متواصلة 24 ساعة</strong>
+                </span>
               </div>
-            </a>
-            <a href="https://wa.me/966567798346" id="contactWhatsapp" class="contact-item" target="_blank" rel="noopener noreferrer">
-              <div class="contact-item-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
-              <div>
-                <span class="contact-item-label">مراسلة فورية عبر واتساب</span>
-                <span class="contact-item-value">+966 56 779 8346</span>
-              </div>
-            </a>
-            <a href="mailto:alnkhbhlnqlalathathbalryadshrk@gmail.com" id="contactEmail" class="contact-item">
-              <div class="contact-item-icon" style="background: rgba(234,67,53,0.1); color: #ea4335;"><i class="fas fa-envelope"></i></div>
-              <div>
-                <span class="contact-item-label">البريد الإلكتروني الرسمي</span>
-                <span class="contact-item-value" style="direction: ltr;">alnkhbhlnqlalathathbalryadshrk@gmail.com</span>
-              </div>
-            </a>
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <span class="contact-item-label">المقر والتغطية</span>
-                <span class="contact-item-value">الرياض - المملكة العربية السعودية</span>
-              </div>
+            </div>
+
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6749064!2d46.6752!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sar!2ssa!4v1620000000000!5m2!1sar!2ssa"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="خريطة تغطية شركة النخبة لنقل الأثاث بالرياض">
+              </iframe>
             </div>
           </div>
-          <!-- Google Map Embed -->
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6749064!2d46.6752!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sar!2ssa!4v1620000000000!5m2!1sar!2ssa"
-              width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="خريطة تغطية شركة النخبة لنقل الأثاث بالرياض">
-            </iframe>
+
+          <!-- Booking form panel -->
+          <div class="form-panel">
+            <form id="contactForm" novalidate>
+              <h3 class="form-title">نموذج حجز خدمة النقل</h3>
+
+              <div class="field" id="fieldName">
+                <label for="clientName">الاسم الكريم <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="clientName" name="clientName" placeholder="أدخل اسمك الكريم" autocomplete="name" required minlength="3" aria-describedby="nameError" />
+                <span class="field-error" id="nameError"></span>
+              </div>
+
+              <div class="field" id="fieldPhone">
+                <label for="clientPhone">رقم الجوال للتواصل (سعودي) <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="clientPhone" name="clientPhone" placeholder="05XXXXXXXX" inputmode="tel" autocomplete="tel" required aria-describedby="phoneError" />
+                <span class="field-error" id="phoneError"></span>
+              </div>
+
+              <div class="field" id="fieldService">
+                <label for="clientService">الخدمة المطلوبة <span class="req" aria-hidden="true">*</span></label>
+                <select id="clientService" name="clientService" required aria-describedby="serviceError">
+                  <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+                  <option value="نقل عفش وأثاث منزلي">نقل عفش وأثاث منزلي</option>
+                  <option value="فك وتركيب أثاث وغرف نوم">فك وتركيب أثاث وغرف نوم</option>
+                  <option value="تغليف أثاث احترافي">تغليف أثاث احترافي</option>
+                  <option value="نقل مكاتب وشركات">نقل مكاتب وشركات</option>
+                  <option value="نقل أجهزة كهربائية ومكيفات">نقل أجهزة كهربائية ومكيفات</option>
+                  <option value="تخزين أثاث">تخزين أثاث</option>
+                  <option value="خدمة شاملة (فك وتغليف ونقل وتركيب)">خدمة شاملة (فك وتغليف ونقل وتركيب)</option>
+                </select>
+                <span class="field-error" id="serviceError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="field" id="fieldFrom">
+                  <label for="fromArea">من حي <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="fromArea" name="fromArea" placeholder="مثال: النرجس" required aria-describedby="fromError" />
+                  <span class="field-error" id="fromError"></span>
+                </div>
+                <div class="field" id="fieldTo">
+                  <label for="toArea">إلى حي <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="toArea" name="toArea" placeholder="مثال: الياسمين" required aria-describedby="toError" />
+                  <span class="field-error" id="toError"></span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="clientMessage">تفاصيل الأثاث أو ملاحظات إضافية</label>
+                <textarea id="clientMessage" name="clientMessage" placeholder="مثال: عدد الغرف، وجود مكيفات سبليت، دور الانطلاق والوصول..." rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                <svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg> إرسال الطلب عبر واتساب
+              </button>
+              <p class="form-note">بالضغط على إرسال سيتم فتح محادثة واتساب مع المشرف مباشرة.</p>
+
+              <div class="form-success" id="formSuccess" role="status">
+                <svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg>
+                <p>تم تجهيز طلبك بنجاح. إذا لم تفتح نافذة الواتساب تلقائياً، <a id="waFallbackLink" href="#" target="_blank" rel="noopener noreferrer">اضغط هنا لإرسال الطلب</a>.</p>
+              </div>
+            </form>
           </div>
-        </div>
 
-        <!-- Contact Booking Form -->
-        <div class="contact-form-wrap" data-aos="fade-left">
-          <form class="contact-form" id="contactForm" novalidate>
-            <h3>نموذج حجز خدمة النقل السريع</h3>
-            <div class="form-group">
-              <label for="clientName">الاسم الكريم *</label>
-              <input type="text" id="clientName" name="clientName" placeholder="أدخل اسمك الكريم" required minlength="3" />
-              <span class="field-error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-              <label for="clientPhone">رقم الجوال للتواصل (سعودي) *</label>
-              <input type="tel" id="clientPhone" name="clientPhone" placeholder="05XXXXXXXX" required />
-              <span class="field-error" id="phoneError"></span>
-            </div>
-            <div class="form-group">
-              <label for="clientService">الخدمة المطلوبة *</label>
-              <select id="clientService" name="clientService" required>
-                <option value="" disabled selected>اختر الخدمة المطلوبة</option>
-                <option value="نقل عفش وأثاث منزلي">نقل عفش وأثاث منزلي</option>
-                <option value="فك وتركيب أثاث وغرف نوم">فك وتركيب أثاث وغرف نوم</option>
-                <option value="تغليف أثاث احترافي">تغليف أثاث احترافي</option>
-                <option value="نقل مكاتب وشركات">نقل مكاتب وشركات</option>
-                <option value="نقل أجهزة كهربائية ومكيفات">نقل أجهزة كهربائية ومكيفات</option>
-                <option value="تخزين أثاث">تخزين أثاث</option>
-                <option value="خدمة شاملة (فك وتغليف ونقل وتركيب)">خدمة شاملة (فك وتغليف ونقل وتركيب)</option>
-              </select>
-              <span class="field-error" id="serviceError"></span>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fromArea">من حي *</label>
-                <input type="text" id="fromArea" name="fromArea" placeholder="مثال: النرجس" required />
-              </div>
-              <div class="form-group">
-                <label for="toArea">إلى حي *</label>
-                <input type="text" id="toArea" name="toArea" placeholder="مثال: الياسمين" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="clientMessage">تفاصيل الأثاث أو أي ملاحظات إضافية</label>
-              <textarea id="clientMessage" name="clientMessage" placeholder="مثال: عدد الغرف، وجود مكيفات سبلت، دور الانطلاق والوصول..." rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full btn-large" id="submitBtn">
-              <i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب فوراً
-            </button>
-            <div class="form-success" id="formSuccess">
-              <i class="fas fa-check-circle"></i>
-              <p>تم تجهيز طلبك بنجاح! جاري تحويلك إلى الواتساب للتواصل مع المشرف مباشرة.</p>
-            </div>
-          </form>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer class="footer" id="footer">
-    <div class="footer-top">
-      <div class="container footer-grid">
-        <!-- Brand & Social -->
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <img src="images/logo.png" alt="شعار شركة النخبة لنقل الأثاث بالرياض" class="footer-logo-img" width="52" height="52" />
-            <div>
-              <span class="footer-logo-title">شركة النخبة</span>
-              <span class="footer-logo-sub">لنقل وتخزين الأثاث بالرياض</span>
-            </div>
-          </div>
-          <p class="footer-desc">
-            الشركة الرائدة في خدمات نقل العفش والأثاث داخل الرياض. فك وتركيب بأيدي فنيين متخصصين، وتغليف آمن يحفظ مقتنياتك الثمينة بأعلى معايير الجودة والأمان.
-          </p>
-          <div class="footer-social-links">
-            <a href="https://tiktok.com/@user505792731677" id="socialTiktok" class="footer-social-link tt" aria-label="حساب تيك توك شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="تيك توك"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="socialInstagram" class="footer-social-link ig" aria-label="انستقرام شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="انستقرام"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/966567798346" id="socialWhatsapp" class="footer-social-link wa" aria-label="واتساب شركة النخبة لنقل الأثاث" target="_blank" rel="noopener noreferrer" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
+  <footer class="footer dark-scope">
+    <div class="container footer-grid">
 
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h4 class="footer-heading">روابط الموقع</h4>
-          <ul class="footer-links">
-            <li><a href="#home"><i class="fas fa-angle-left"></i> الرئيسية</a></li>
-            <li><a href="#services"><i class="fas fa-angle-left"></i> خدماتنا</a></li>
-            <li><a href="#why"><i class="fas fa-angle-left"></i> لماذا النخبة</a></li>
-            <li><a href="#areas"><i class="fas fa-angle-left"></i> أحياء الرياض</a></li>
-            <li><a href="#reviews"><i class="fas fa-angle-left"></i> تقييمات جوجل</a></li>
-            <li><a href="#gallery"><i class="fas fa-angle-left"></i> معرض الصور</a></li>
-            <li><a href="#contact"><i class="fas fa-angle-left"></i> تواصل معنا</a></li>
-          </ul>
-        </div>
-
-        <!-- Services Links -->
-        <div class="footer-col">
-          <h4 class="footer-heading">خدماتنا الرئيسية</h4>
-          <ul class="footer-links">
-            <li><a href="#services"><i class="fas fa-angle-left"></i> نقل عفش منازل وفلل</a></li>
-            <li><a href="#services"><i class="fas fa-angle-left"></i> فك وتركيب غرف ومطابخ</a></li>
-            <li><a href="#services"><i class="fas fa-angle-left"></i> تغليف أثاث احترافي</a></li>
-            <li><a href="#services"><i class="fas fa-angle-left"></i> نقل مكاتب ومؤسسات</a></li>
-            <li><a href="#services"><i class="fas fa-angle-left"></i> فك ونقل المكيفات</a></li>
-            <li><a href="#services"><i class="fas fa-angle-left"></i> مستودعات تخزين الأثاث</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="footer-col">
-          <h4 class="footer-heading">تواصل مع النخبة</h4>
-          <ul class="footer-contact">
-            <li>
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:+966567798346">0567798346</a>
-            </li>
-            <li>
-              <i class="fab fa-whatsapp"></i>
-              <a href="https://wa.me/966567798346" target="_blank" rel="noopener noreferrer">+966 56 779 8346</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:alnkhbhlnqlalathathbalryadshrk@gmail.com">alnkhbhlnqlalathathbalryadshrk@gmail.com</a>
-            </li>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>الرياض، المملكة العربية السعودية</span>
-            </li>
-            <li>
-              <i class="fas fa-clock"></i>
-              <span>خدمة متواصلة 24 ساعة طوال أيام الأسبوع</span>
-            </li>
-          </ul>
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <img src="images/logo.png" alt="شعار شركة النخبة لنقل الأثاث بالرياض" class="brand-img" width="42" height="43" />
+          <span>
+            <span class="brand-name">شركة النخبة</span>
+            <span class="brand-sub">لنقل وتخزين الأثاث بالرياض</span>
+          </span>
+        </a>
+        <p class="footer-desc">
+          الشركة الرائدة في خدمات نقل العفش والأثاث داخل الرياض. فك وتركيب بأيدي فنيين متخصصين، وتغليف آمن بأعلى معايير الجودة.
+        </p>
+        <div class="footer-social">
+          <a href="https://tiktok.com/@user505792731677" id="socialTiktok" aria-label="حساب تيك توك" target="_blank" rel="noopener noreferrer"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-tiktok"></use></svg></a>
+          <a href="https://www.instagram.com/shrkhalnkhbhllnql?igsh=MWYzeHZjcHZ3bG5hcw==" id="socialInstagram" aria-label="حساب انستقرام" target="_blank" rel="noopener noreferrer"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="https://wa.me/966567798346" id="socialWhatsapp" aria-label="واتساب الشركة" target="_blank" rel="noopener noreferrer"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg></a>
         </div>
       </div>
+
+      <nav aria-label="روابط الموقع">
+        <h3 class="footer-heading">روابط الموقع</h3>
+        <ul class="footer-links">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#why">لماذا النخبة</a></li>
+          <li><a href="#areas">أحياء الرياض</a></li>
+          <li><a href="#gallery">معرض الأعمال</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="خدماتنا الرئيسية">
+        <h3 class="footer-heading">خدماتنا الرئيسية</h3>
+        <ul class="footer-links">
+          <li><a href="#services">نقل عفش المنازل والفلل</a></li>
+          <li><a href="#services">فك وتركيب الغرف والمطابخ</a></li>
+          <li><a href="#services">تغليف الأثاث الاحترافي</a></li>
+          <li><a href="#services">نقل المكاتب والمؤسسات</a></li>
+          <li><a href="#services">فك ونقل المكيفات</a></li>
+          <li><a href="#services">مستودعات تخزين الأثاث</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3 class="footer-heading">تواصل مع النخبة</h3>
+        <ul class="footer-contact">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> <a href="tel:+966567798346"><span dir="ltr">0567798346</span></a></li>
+          <li><svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg> <a href="https://wa.me/966567798346" target="_blank" rel="noopener noreferrer"><span dir="ltr">+966 56 779 8346</span></a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> <a href="mailto:alnkhbhlnqlalathathbalryadshrk@gmail.com"><span class="break-all" dir="ltr">alnkhbhlnqlalathathbalryadshrk@gmail.com</span></a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> الرياض، المملكة العربية السعودية</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> خدمة متواصلة 24 ساعة طوال أيام الأسبوع</li>
+        </ul>
+      </div>
+
     </div>
+
     <div class="footer-bottom">
-      <div class="container">
-        <p>جميع الحقوق محفوظة &copy; <span id="currentYear"></span> شركة النخبة لنقل وتخزين الأثاث - الرياض</p>
-        <p class="footer-seo">نقل اثاث بالرياض | شركة نقل اثاث بالرياض | فك وتركيب وتغليف أثاث | نقل عفش شمال وشرق وغرب الرياض</p>
+      <div class="container footer-bottom-inner">
+        <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2026</span> شركة النخبة لنقل وتخزين الأثاث — الرياض</p>
+        <p class="footer-tagline">نقل أثاث بالرياض — فك وتركيب وتغليف وتخزين بأعلى معايير الأمان</p>
       </div>
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
-  <script src="script.js"></script>
+  <!-- Floating action layer -->
+  <div class="floating-buttons" id="floatingButtons">
+    <a href="https://wa.me/966567798346" id="floatWhatsapp" class="float-btn float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="تواصل فوري عبر واتساب">
+      <svg class="icon icon-fill" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+    </a>
+    <a href="tel:+966567798346" id="floatCall" class="float-btn float-call" aria-label="اتصل بشركة النخبة">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+    </a>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="العودة إلى أعلى الصفحة">
+    <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"></use></svg>
+  </button>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
