@@ -1,0 +1,26 @@
+{
+  "name": "شركة مرحال لنقل الأثاث بالرياض",
+  "short_name": "مرحال",
+  "description": "خدمات نقل وفك وتركيب وتغليف الأثاث بالرياض",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06201E",
+  "theme_color": "#06201E",
+  "icons": [
+    {
+      "src": "images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo-merhal-icon-square.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

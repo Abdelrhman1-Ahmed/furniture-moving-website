@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Gold metallic gradients -->
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7EAC4" />
+      <stop offset="25%" stop-color="#C9A24A" />
+      <stop offset="50%" stop-color="#ECD799" />
+      <stop offset="75%" stop-color="#AA7C28" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+    <linearGradient id="goldInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0C4" />
+      <stop offset="40%" stop-color="#D4AF37" />
+      <stop offset="75%" stop-color="#AA7C28" />
+      <stop offset="100%" stop-color="#735416" />
+    </linearGradient>
+    <!-- Deep Emerald Teal background gradient -->
+    <linearGradient id="emeraldShield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#145A53" />
+      <stop offset="50%" stop-color="#0C3834" />
+      <stop offset="100%" stop-color="#051D1B" />
+    </linearGradient>
+    <filter id="subtleDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Outer Shield Shadow and Rim -->
+  <g filter="url(#subtleDrop)">
+    <!-- Outer Gold Border -->
+    <path d="M256,16 C368,64 460,44 460,44 C460,268 386,412 256,496 C126,412 52,268 52,44 C52,44 144,64 256,16 Z"
+          fill="url(#goldRim)" />
+    
+    <!-- Shield Rim Inner Dark Line -->
+    <path d="M256,32 C354,74 440,56 440,56 C440,252 372,386 256,468 C140,386 72,252 72,56 C72,56 158,74 256,32 Z"
+          fill="#06201E" />
+    
+    <!-- Emerald Shield Core -->
+    <path d="M256,40 C346,78 428,62 428,62 C428,244 364,374 256,454 C148,374 84,244 84,62 C84,62 166,78 256,40 Z"
+          fill="url(#emeraldShield)" />
+          
+    <!-- Inner Gold Filigree Line -->
+    <path d="M256,58 C334,92 404,78 404,78 C404,232 346,352 256,428 C166,352 108,232 108,78 C108,78 178,92 256,58 Z"
+          fill="none" stroke="url(#goldRim)" stroke-width="4.5" opacity="0.8" />
+  </g>
+
+  <!-- Central Gear, House, and Window Emblem -->
+  <g transform="translate(256, 232)">
+    <!-- Gear Rim and 8 Teeth -->
+    <path d="
+      M -26,-116 L 26,-116 L 22,-86 C 39,-82 56,-74 70,-64 L 94,-80 L 128,-46 L 112,-22 C 122,-8 130,9 134,26 L 164,22 L 164,72 L 134,68 C 130,85 122,102 112,116 L 128,140 L 94,174 L 70,158 C 56,168 39,176 22,180 L 26,210 L -26,210 L -22,180 C -39,176 -56,168 -70,158 L -94,174 L -128,140 L -112,116 C -122,102 -130,85 -134,68 L -164,72 L -164,22 L -134,26 C -130,9 -122,-8 -112,-22 L -128,-46 L -94,-80 L -70,-64 C -56,-74 -39,-82 -22,-86 Z
+      M 0,-66 C 72,-66 130,-8 130,64 C 130,136 72,194 0,194 C -72,194 -130,136 -130,64 C -130,-8 -72,-66 0,-66 Z
+    " fill="url(#goldInner)" fill-rule="evenodd" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.5))" />
+
+    <!-- House Gable Roof -->
+    <path d="M 0,-58 L 92,18 L 74,32 L 0,-26 L -74,32 L -92,18 Z"
+          fill="url(#goldRim)" filter="drop-shadow(0 3px 5px rgba(0,0,0,0.55))" />
+    
+    <!-- Chimneys -->
+    <rect x="42" y="-34" width="13" height="26" fill="url(#goldInner)" rx="2" />
+    <rect x="-55" y="-34" width="13" height="26" fill="url(#goldInner)" rx="2" />
+
+    <!-- House 4-Grid Window -->
+    <g fill="url(#goldRim)" transform="translate(0, 52)">
+      <rect x="-24" y="-24" width="20" height="20" rx="3" />
+      <rect x="4" y="-24" width="20" height="20" rx="3" />
+      <rect x="-24" y="4" width="20" height="20" rx="3" />
+      <rect x="4" y="4" width="20" height="20" rx="3" />
+    </g>
+  </g>
+</svg>
